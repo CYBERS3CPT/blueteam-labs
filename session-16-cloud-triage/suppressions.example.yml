@@ -1,0 +1,24 @@
+# Suppressions. Each one is a risk you are accepting ON PURPOSE, which is why
+# all four fields are mandatory and the tool ignores any entry missing one.
+#
+#   check     substring of the check ID or title
+#   resource  optional — omit to suppress the check everywhere
+#   reason    why this is acceptable HERE. "false positive" is not a reason.
+#   who       a person. Not a team, not "security".
+#   until     a real date, YYYY-MM-DD. An expiry is what separates a decision
+#             from an oversight, and the tool will refuse an expired one.
+#
+# The placeholders below are deliberately not dates. The tool will reject these
+# two entries and tell you why, which is the shortest possible lesson in what a
+# suppression has to carry. Set real dates and they start working.
+
+- check: s3_bucket_public_access
+  resource: public-website-assets
+  reason: deliberate static site; no customer data; content reviewed quarterly
+  who: <your name>
+  until: YYYY-MM-DD
+
+- check: cloudtrail_multi_region
+  reason: single-region account by design; documented in the landing zone standard
+  who: <your name>
+  until: YYYY-MM-DD
