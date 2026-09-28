@@ -1,0 +1,31 @@
+Return-Path: <rita.almeida@tagus-logistics.example>
+Received: from mx1.tagus-logistica.example (mx1.tagus-logistica.example [192.0.2.10])
+ by mbox.tagus-logistica.example with LMTP; Wed, 15 Oct 2025 17:52:30 +0000
+Received: from mail.tagus-logistics.example (mail.tagus-logistics.example [198.51.100.14])
+ by mx1.tagus-logistica.example with ESMTPS id 9Qa1; Wed, 15 Oct 2025 17:52:28 +0000
+Authentication-Results: mx1.tagus-logistica.example;
+ spf=pass smtp.mailfrom=tagus-logistics.example;
+ dkim=pass header.d=tagus-logistics.example;
+ dmarc=pass (p=reject) header.from=tagus-logistics.example
+DKIM-Signature: v=1; a=rsa-sha256; d=tagus-logistics.example; s=sel1; h=from:to:subject:date;
+ bh=q1w2e3r4t5y6u7i8o9p0asdfghjkl=; b=bm90IGEgcmVhbCBzaWduYXR1cmUsIG5pY2UgdHJ5
+From: "Rita Almeida" <rita.almeida@tagus-logistics.example>
+To: <joao.pereira@tagus-logistica.example>
+Subject: Assunto confidencial - preciso da tua ajuda hoje
+Date: Wed, 15 Oct 2025 17:52:25 +0000
+Message-ID: <a81f0c2e-77d1@tagus-logistics.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+João,
+
+Estou numa reunião com o conselho e não posso atender chamadas.
+Preciso que trates de uma transferência urgente para um fornecedor
+novo antes das 18h30. É confidencial até ao anúncio da aquisição,
+por isso não fales com a Tesouraria nem com mais ninguém.
+
+Diz-me só quando estiveres disponível e envio os dados.
+
+Enviado do meu telemóvel (que, curiosamente, não recebe chamadas)
+Rita

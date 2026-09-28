@@ -28,6 +28,7 @@ Nothing here connects to the network. It reads the file you gave it and no more.
 """
 
 import argparse
+import contextlib
 import email
 import email.policy
 import hashlib
@@ -78,11 +79,20 @@ def check_confusables(text, label):
     # xn-- is punycode. It is legitimate technology and it is also how every
     # homoglyph domain is actually registered.
     if "xn--" in text.lower():
-        try:
-            decoded = text.encode().decode("idna")
-        except Exception:
-            decoded = "(could not decode)"
-        finding("high", f"punycode in {label}", f"{text} decodes to {decoded}")
+        # Decode label by label: the idna codec only takes a bare hostname, and
+        # a From header is a display name, an address and some angle brackets.
+        def label_decode(m):
+            try:
+                return m.group(0).encode().decode("idna")
+            except Exception:
+                return m.group(0) + "(?)"
+        decoded = re.sub(r"xn--[a-z0-9-]+", label_decode, text, flags=re.I)
+        # The decoded form looks identical to the real one, which is the point of
+        # it. Name the code points, because "looks the same" is not a finding.
+        odd = sorted({f"U+{ord(ch):04X} {CONFUSABLES.get(ch, '')}".strip()
+                      for ch in decoded if ord(ch) > 127})
+        finding("high", f"punycode in {label}", f"{text} decodes to {decoded}"
+                + (f"  [non-ASCII: {'; '.join(odd)}]" if odd else ""))
         return True
     return False
 
@@ -277,7 +287,8 @@ def analyse(path, brief=False):
     head("9. attachments")
     MAGIC = {b"MZ": "PE executable", b"PK\x03\x04": "zip (or docx/xlsx/jar)",
              b"%PDF": "PDF", b"\x7fELF": "ELF executable", b"\xd0\xcf\x11\xe0": "OLE (legacy Office)",
-             b"Rar!": "RAR", b"7z\xbc\xaf": "7-Zip", b"#!": "script with shebang"}
+             b"Rar!": "RAR", b"7z\xbc\xaf": "7-Zip", b"#!": "script with shebang",
+             b"\x89PNG": "PNG image", b"\xff\xd8\xff": "JPEG image", b"GIF8": "GIF image"}
     found = False
     for part in msg.walk():
         fn = part.get_filename()
@@ -347,7 +358,13 @@ def main():
         if not Path(f).is_file():
             print(f" fail  no such file: {f}", file=sys.stderr)
             continue
-        out[f] = analyse(f, brief=args.brief or args.json)
+        if args.json:
+            # The narrative goes to stderr so stdout is JSON and nothing else.
+            # A --json that needs cleaning up before jq will take it is not --json.
+            with contextlib.redirect_stdout(sys.stderr):
+                out[f] = analyse(f, brief=True)
+        else:
+            out[f] = analyse(f, brief=args.brief)
     if args.json:
         print(json.dumps(out, indent=2))
 

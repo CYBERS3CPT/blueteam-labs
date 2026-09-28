@@ -1,0 +1,34 @@
+Return-Path: <tagus.it.support77@freemail.example>
+Received: from mx1.tagus-logistica.example (mx1.tagus-logistica.example [192.0.2.10])
+ by mbox.tagus-logistica.example with LMTP; Thu, 16 Oct 2025 08:02:11 +0000
+Received: from smtp-out.freemail.example (smtp-out.freemail.example [198.51.100.200])
+ by mx1.tagus-logistica.example with ESMTPS id 1Zz7; Thu, 16 Oct 2025 08:02:10 +0000
+Authentication-Results: mx1.tagus-logistica.example;
+ spf=pass smtp.mailfrom=freemail.example;
+ dkim=pass header.d=freemail.example;
+ dmarc=pass (p=none) header.from=freemail.example
+From: "helpdesk@tagus-logistica.example" <tagus.it.support77@freemail.example>
+Reply-To: <helpdesk-tickets@reply-desk.example>
+To: <equipa@tagus-logistica.example>
+Subject: [IT] A sua caixa de correio atingiu 99% - ação necessária
+Date: Thu, 16 Oct 2025 08:02:07 +0000
+Message-ID: <CAF3x9k2m@mail.freemail.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b03"
+
+--b03
+Content-Type: text/plain; charset=UTF-8
+
+A sua caixa de correio está 99% cheia. Para evitar a perda de mensagens,
+valide a sua conta em http://198.51.100.23/owa/auth/validate.aspx
+
+O Helpdesk nunca lhe pedirá a password. Exceto agora.
+
+--b03
+Content-Type: text/html; charset=UTF-8
+
+<p>A sua caixa de correio est&aacute; <b>99% cheia</b>.</p>
+<p><a href="http://198.51.100.23/owa/auth/validate.aspx">Validar conta</a></p>
+<p style="color:#999">O Helpdesk nunca lhe pedir&aacute; a password. Exceto agora.</p>
+
+--b03--

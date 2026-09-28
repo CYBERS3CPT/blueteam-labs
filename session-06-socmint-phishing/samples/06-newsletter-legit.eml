@@ -1,0 +1,34 @@
+Return-Path: <bounces+u8812@em.tagus-logistica.example>
+Received: from mx1.tagus-logistica.example (mx1.tagus-logistica.example [192.0.2.10])
+ by mbox.tagus-logistica.example with LMTP; Fri, 24 Oct 2025 10:00:09 +0000
+Received: from o1.em.tagus-logistica.example (o1.em.tagus-logistica.example [198.51.100.60])
+ by mx1.tagus-logistica.example with ESMTPS id 5Ns2; Fri, 24 Oct 2025 10:00:07 +0000
+Authentication-Results: mx1.tagus-logistica.example;
+ spf=pass smtp.mailfrom=em.tagus-logistica.example;
+ dkim=pass header.d=tagus-logistica.example;
+ dmarc=pass (p=reject) header.from=tagus-logistica.example
+From: "Tagus Logistica - Comunicação Interna" <news@tagus-logistica.example>
+To: <equipa@tagus-logistica.example>
+Subject: Newsletter de outubro - o novo armazém de Alverca
+Date: Fri, 24 Oct 2025 10:00:05 +0000
+Message-ID: <nl-2025-10.u8812@em.tagus-logistica.example>
+List-Unsubscribe: <https://em.tagus-logistica.example/unsub/u8812>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b06"
+
+--b06
+Content-Type: text/plain; charset=UTF-8
+
+Newsletter de outubro. O armazém de Alverca abre em novembro.
+Mais em https://intranet.tagus-logistica.example/noticias/alverca
+O bolo de aniversário do mês é de cenoura. Sabemos. Pedimos desculpa.
+
+--b06
+Content-Type: text/html; charset=UTF-8
+
+<h1>Newsletter de outubro</h1>
+<p>O armazém de Alverca abre em novembro.
+<a href="https://intranet.tagus-logistica.example/noticias/alverca">Ler mais</a></p>
+<p>O bolo de aniversário do mês é de cenoura. Sabemos. Pedimos desculpa.</p>
+
+--b06--

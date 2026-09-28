@@ -1,0 +1,28 @@
+Return-Path: <billing@mailer.cheap-vps.example>
+Received: from mx1.tagus-logistica.example (mx1.tagus-logistica.example [192.0.2.10])
+ by mbox.tagus-logistica.example with LMTP; Tue, 14 Oct 2025 09:41:07 +0000
+Received: from vps-2231.cheap-vps.example (vps-2231.cheap-vps.example [203.0.113.77])
+ by mx1.tagus-logistica.example with ESMTP id 4Rk2; Tue, 14 Oct 2025 09:23:51 +0000
+Authentication-Results: mx1.tagus-logistica.example;
+ spf=fail (sender IP is 203.0.113.77) smtp.mailfrom=mailer.cheap-vps.example;
+ dkim=none (message not signed);
+ dmarc=fail (p=reject dis=none) header.from=tagus-logistica.example
+From: "Tagus Logistica - Contabilidade" <contabilidade@tagus-logistica.example>
+To: <tesouraria@tagus-logistica.example>
+Subject: Fatura FT 2025/4471 - pagamento em atraso
+Date: Tue, 14 Oct 2025 09:23:48 +0000
+Message-ID: <20251014092348.5521@vps-2231.cheap-vps.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Bom dia,
+
+Segue em anexo... na verdade não segue, porque o anexo pesava muito e o
+servidor que aluguei por 2 euros não aguentou.
+
+Por favor efetue a transferência da fatura FT 2025/4471 para o novo IBAN
+indicado no portal: http://203.0.113.77/portal/fatura/4471
+
+Cumprimentos,
+Contabilidade

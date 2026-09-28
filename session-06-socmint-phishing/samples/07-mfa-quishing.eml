@@ -1,0 +1,53 @@
+Return-Path: <security@secure-notice.example>
+Received: from mx1.tagus-logistica.example (mx1.tagus-logistica.example [192.0.2.10])
+ by mbox.tagus-logistica.example with LMTP; Mon, 27 Oct 2025 07:45:31 +0000
+Received: from mta.secure-notice.example (mta.secure-notice.example [203.0.113.201])
+ by mx1.tagus-logistica.example with ESMTPS id 8Tq4; Mon, 27 Oct 2025 07:45:29 +0000
+Authentication-Results: mx1.tagus-logistica.example;
+ spf=pass smtp.mailfrom=secure-notice.example;
+ dkim=pass header.d=secure-notice.example;
+ dmarc=pass (p=none) header.from=secure-notice.example
+From: "Segurança da Informação" <security@secure-notice.example>
+To: <rita.almeida@tagus-logistica.example>
+Subject: Obrigatório: reconfigure o MFA até sexta-feira
+Date: Mon, 27 Oct 2025 07:45:27 +0000
+Message-ID: <mfa-2025-10-27@secure-notice.example>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="b07"
+
+--b07
+Content-Type: text/html; charset=UTF-8
+
+<p>No âmbito da nova política de segurança, todos os colaboradores devem
+reconfigurar o MFA até sexta-feira.</p>
+<p>Leia o código abaixo <b>com o telemóvel</b> (o computador da empresa
+tem proteção demais e estraga a experiência).</p>
+<p><img src="cid:qr7781" alt="QR"></p>
+
+--b07
+Content-Type: image/png; name="mfa.png"
+Content-ID: <qr7781>
+Content-Disposition: inline; filename="mfa.png"
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAAcIAAAHCAQAAAABUY/ToAAAD+ElEQVR4nO1cUY6jMAx1HKT5BGkP
+MEehN1v1ZnCUHmAl+ByJyis7CYSuUAJatsPG76NDwU/TSJb9bCcYgmPo8SARQJkpYNJiC8pMAZMW
+W1BmCpi02IIyU8CkxRaUmQImLbagzP+RaTwqgL6RrxXffhroG/4wFZjbGKxub/61R4CHWAxlZjJb
+Ygx8OVZARF/sPpbMbfxg1f00AGDFiK68zgPAI6QimaOPL+YnTWBMYwnaRwXUyb3BOs8JAerdv3Y/
+8ADHQZkpVK83emMnAnhWAPUE0A6NRCQgGK+8TlTmv2Q+Q956sPhpgFPbBF4FnfQ/M4G5hn9Amecz
+ayLJW3Ilwlr0ELA3iZyWp+JNf+1/7gce4Dgo8zwmxDIZWAUNmx8AkQDvrrVOVObJeoiWG/3nl/H3
+WADxV4KR81tNF14nKvPsONS6IGOJOs5lDvUEvt6vVyYCjUNJYFE+RE7nzE7T0suVDWbyVX0oC1iY
+Dw0cglwcEi+Rst7SIrYjTa16KA9Ymqa27C8+yIQHE0hq8xFpmBOf+lAWsBAm+MzE/URfl/EFe5OE
+JXItaolS3pHUhzKB5eUycEOzEH0WbwKnqWcppHooD1hqHAIXfUQAWVemheLMy26NQ5nAwnwI2GlC
+uFkiEqzzW3igPpQDLI1pSYb3dG8s0Z13DfEuEBCX4qkHdbILZDTm2uvcDdxPKbjH2IoUcl1EPxYj
+KfX5Xng6R65rrROVeXptX8dNRWkNBaFE3qXknugm1UN5wBJ9iJaPoIwgKvB9Wa8+lAksTVPbUI3V
+qxY1LYO0pWpTH8oCllfbk89bq7Z155LcS2pTH8oBljdzpVk6u7mGbzTauXvEcOW/+lAOsMQ9aPVc
+eYUJB0RNRbZQPbQDWN6efILxgwyAnbzndOFe3/yqiB8YGJuwYe1a60Rlnt4fonlfUKSCYD2tjyWT
+xqE0sBAmrOp4cZowo4+qsXrVfNRclgcsjWmdzgmnykQUgQPRg8ccYSzrPeyi69wN3E8pOZcN4TS0
+r8umyJFeGBqH0sBCmBBtCfIda3o9DES+6PdP1YcygYW+94Oktndz+6g7zZAxPp991fd+5AELYULI
+ZfFmxmXLK8xNxUUtaRzKBJa492PwU7JIU7fL4WiIS331oTSwVGb74LP1Nb+kgWPOnfPbPJb1x++/
+z6/NBuabvkCZ+98d80kA/S34C9QcjcYf3LseuEXtT1JfbZ2ozNOZddhUTQ/vVsvLYgxHJPeGq9si
+sa+5zv3AA5yymJX707voYsG0nRzfGIDclGyspvBeK8bYvPPXojK/IdPoO84TwJTBJpSZAiYttqDM
+FDBpsQVlpoBJiy0oMwVMWmxBmSlg0gIKZ/4GvkONZfUaHYYAAAAASUVORK5CYII=
+
+--b07--
