@@ -1,5 +1,11 @@
 # Session 6 — SOCMINT, Dark Web and Phishing (assessed)
 
+Analysis targets for the whole session live in `samples/` — seven `.eml`
+messages and five profiles, all fictional (`.example` domains, documentation
+IPs). Hash them first (`shasum -a 256 -c samples/SHA256SUMS`), then read them
+with the tools below. See `samples/README.md` for what each one exercises, and
+`EXERCISES.md` for the eleven-exercise walk-through that uses them.
+
 ## `eml-triage.py` — header forensics
 
 ```bash
