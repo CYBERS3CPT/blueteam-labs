@@ -1,5 +1,17 @@
 # Session 8 — Analysis Methods and the Forensic Report
 
+**Exercises:** [`EXERCISES.md`](EXERCISES.md) — fourteen of them, on three
+sources from the same case: the USB pen you acquired in Session 7, a super
+timeline of the finance workstation it was plugged into, and a triage collection
+from the web server whose volatile state you met last week. See
+[`samples/`](samples/README.md) for what is in each, and which clock it keeps.
+
+```bash
+(cd samples && shasum -a 256 -c SHA256SUMS)
+mkdir -p out && gunzip -c samples/fin02-timeline.csv.gz > out/fin02.csv
+./timeline-reduce.py out/fin02.csv --peaks
+```
+
 ## `timeline-reduce.py`
 
 ```bash
@@ -19,6 +31,14 @@ filter applied, the row counts, and the equivalent `psort.py` expression.
 That file is not a courtesy. Without it your 200 rows cannot be reproduced, and a
 finding that cannot be reproduced is an assertion. Put it in the appendix.
 
+### "Equivalent" means equivalent
+
+The `psort.py` expression in the filter file covers the time window. When you
+also used `--user`, `--path`, `--types` or `--exclude`, the file says the
+expression is **not** equivalent, and records the exact command line instead —
+because pasting a psort query that returns 4 000 rows next to a table of 34 is
+how a reproducibility appendix becomes an argument.
+
 ### `--peaks`
 
 Finds candidate anchors: the busiest minutes, and the hours with almost nothing.
@@ -36,6 +56,25 @@ writes. `--types exec,persist` is usually the first cut worth making.
 
 If your input is not UTC, fix that before you reduce it. A timeline mixing
 timezones is worse than no timeline, because it looks authoritative.
+
+---
+
+## `wtmp-read.py`
+
+```bash
+./wtmp-read.py collection/var/log/wtmp           # sessions, like last
+./wtmp-read.py collection/var/log/btmp --raw     # every record
+./wtmp-read.py collection/var/log/wtmp --csv     # for the timeline
+```
+
+Debian 13 and current Kali replaced `last` with the `wtmpdb` version, which reads
+SQLite and cannot open the classic binary `wtmp` of a Debian 12 server. `utmpdump`
+went with it. This reads the glibc x86_64 record (384 bytes), prints UTC, and
+**refuses** a file whose size is not a multiple of the record: a misaligned parse
+prints plausible garbage, and plausible garbage is the worst kind.
+
+The times are the host's clock. If that clock was wrong, apply the drift you
+recorded at collection; the script will not do it for you, on purpose.
 
 ---
 
