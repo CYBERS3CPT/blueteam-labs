@@ -135,7 +135,7 @@ q_logons() {
     hint "RDP connect/disconnect WITH the source address"
   found "Linux auth log" $(f "auth.log*" 8 4) $(f "secure*" 8 4)
   found "wtmp / btmp" $(f "wtmp" 8 2) $(f "btmp" 8 2) && \
-    hint "last -f wtmp   |   lastb -f btmp"
+    hint "last -f wtmp  |  lastb -f btmp  |  no classic last on your box? ./wtmp-read.py wtmp"
   say ""
   hint "Type 10 at 03h00 from an address nobody recognises is the shape of the"
   hint "finding. Type 3 from a server is usually a service doing its job."

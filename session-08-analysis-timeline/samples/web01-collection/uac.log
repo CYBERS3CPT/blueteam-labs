@@ -1,0 +1,8 @@
+UAC (Unix-like Artifacts Collector) 2.9.1
+Command line: ./uac -p ir_triage /mnt/evidence/C-007
+Operating system: linux
+System architecture: x86_64
+Hostname: tagus-web-01
+Collection started (system clock): 2025-10-17 09:31:05 +0000
+Collection finished (system clock): 2025-10-17 09:36:48 +0000
+Note: the system clock of this host is approx. 4 minutes behind a reference clock (see C-007 Session 7 notes)

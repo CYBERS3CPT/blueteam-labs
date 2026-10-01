@@ -1,0 +1,6 @@
+[Unit]
+Description=Nightly database dump
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/backup-db.sh

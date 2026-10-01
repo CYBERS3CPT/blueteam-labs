@@ -41,6 +41,7 @@ session-07-forensic-acquisition/   acquire.sh           an image that survives c
                                    memory-capture.sh    volatile order, enforced
 session-08-analysis-timeline/      timeline-reduce.py   two million lines to two hundred
                                    hunt.sh              artefacts, asked as questions
+                                   wtmp-read.py         the wtmp your new last can't read
 session-09-mobile-forensics/       epoch.py             every timestamp format mobile uses
                                    android-collect.sh   logical collection, with consent
                                    ios-backup.py        read a backup without a licence
@@ -65,7 +66,7 @@ session-17-cloud-lab/              scope.sh             written before you touch
                                    teardown-check.sh    prove the lab is actually gone
 ```
 
-**24 shell scripts, 16 Python.** No dates anywhere: the material is meant to be
+**24 shell scripts, 17 Python.** No dates anywhere: the material is meant to be
 re-run for every edition of the course.
 
 Every folder has its own README with the reasoning. Every script answers `--help`.
@@ -117,6 +118,7 @@ A few scripts will argue with you. Briefly, so it is not a surprise:
 | `honeypot-lab.sh` | Binding port 22. You will lock yourself out and blame the honeypot. |
 | `yara-gen.py` | Emitting a rule it has not tested against a benign corpus. `--test` exits non-zero on a false positive. |
 | `memory-capture.sh` | Writing the capture to the system disk it is capturing. Quietly, without lecturing you. |
+| `wtmp-read.py` | Parsing a file whose size is not a whole number of records. A misaligned parse prints plausible garbage. |
 | `metrics.py` | Reporting mean time to detect without the coverage figure beside it. A fast number on a narrow scope is a flattering number. |
 | `harden.sh` | Running `after` without a `before`. A baseline you cannot diff is a claim, not a measurement. |
 | `deprovision-check.sh` | Pretending to be complete. It tells you which of the thirteen steps it cannot see from here. |

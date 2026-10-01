@@ -23,6 +23,7 @@ timezones is worse than no timeline, because it looks authoritative.
 import argparse
 import csv
 import re
+import shlex
 import sys
 from collections import Counter
 from datetime import datetime, timedelta, timezone
@@ -217,9 +218,12 @@ def main():
     # The filter travels with the output. Without this file, the reduction is
     # not reproducible, and an irreproducible reduction is not evidence.
     filt = out.with_suffix(".filter.txt")
+    extra = [f"--{k}" for k, v in (("user", args.user), ("path", args.path),
+                                   ("types", args.types), ("exclude", args.exclude)) if v]
     filt.write_text(
         "Timeline reduction\n"
         f"  produced      {datetime.now(timezone.utc):%Y-%m-%dT%H:%M:%SZ}\n"
+        f"  command       {shlex.join(sys.argv)}\n"
         f"  source        {args.csvfile}\n"
         f"  anchor (UTC)  {anchor:%Y-%m-%d %H:%M:%S}\n"
         f"  window        ±{args.window}  ({lo:%Y-%m-%d %H:%M:%S} .. {hi:%Y-%m-%d %H:%M:%S} UTC)\n"
@@ -229,9 +233,15 @@ def main():
         f"  exclude       {args.exclude or '(none)'}\n"
         f"  rows in       {total}\n"
         f"  rows out      {len(kept)}\n"
-        "\nEquivalent psort.py expression:\n"
-        f'  psort.py -o dynamic -w out.csv timeline.plaso \\\n'
+        + ("\nEquivalent psort.py expression:\n" if not extra else
+           "\npsort.py expression for the TIME WINDOW ONLY:\n")
+        + f'  psort.py -o dynamic -w out.csv timeline.plaso \\\n'
         f'    "date > \'{lo:%Y-%m-%d %H:%M:%S}\' AND date < \'{hi:%Y-%m-%d %H:%M:%S}\'"\n'
+        + ("" if not extra else
+           f"  NOT equivalent: this script also applied {', '.join(extra)} on top of\n"
+           "  the window. Reproduce with this script and these arguments, or the counts\n"
+           "  will not match and someone will ask why.\n")
+        +
         "\nInclude this file in the report appendix. Without it the reduced\n"
         "timeline cannot be reproduced, and a finding that cannot be reproduced\n"
         "is an assertion.\n"

@@ -1,0 +1,269 @@
+Oct 16 00:25:36 tagus-web-01 sshd[3178]: Invalid user admin from 203.0.113.200 port 55473
+Oct 16 01:00:52 tagus-web-01 sshd[3175]: Invalid user admin from 203.0.113.64 port 39331
+Oct 16 02:37:38 tagus-web-01 sshd[3197]: Invalid user admin from 203.0.113.211 port 31147
+Oct 16 04:36:25 tagus-web-01 sshd[3183]: Invalid user admin from 203.0.113.25 port 50525
+Oct 16 04:56:34 tagus-web-01 sshd[3182]: Invalid user oracle from 203.0.113.164 port 47569
+Oct 16 07:50:59 tagus-web-01 sshd[3192]: Failed password for root from 203.0.113.132 port 62935 ssh2
+Oct 16 08:21:25 tagus-web-01 sshd[3173]: Invalid user oracle from 203.0.113.63 port 34678
+Oct 16 08:55:44 tagus-web-01 sshd[3172]: Invalid user admin from 203.0.113.219 port 59176
+Oct 16 09:41:05 tagus-web-01 sshd[3190]: Invalid user admin from 203.0.113.110 port 49025
+Oct 16 10:16:02 tagus-web-01 sshd[3195]: Invalid user oracle from 203.0.113.124 port 36854
+Oct 16 10:18:27 tagus-web-01 sshd[3181]: Failed password for root from 203.0.113.242 port 32629 ssh2
+Oct 16 10:20:43 tagus-web-01 sshd[3177]: Invalid user oracle from 203.0.113.148 port 41423
+Oct 16 10:33:21 tagus-web-01 sshd[3196]: Failed password for root from 203.0.113.224 port 46137 ssh2
+Oct 16 13:53:04 tagus-web-01 sshd[3198]: Failed password for root from 203.0.113.69 port 48489 ssh2
+Oct 16 14:23:55 tagus-web-01 sshd[3179]: Failed password for root from 203.0.113.41 port 60988 ssh2
+Oct 16 16:38:09 tagus-web-01 sshd[3185]: Invalid user ubuntu from 203.0.113.98 port 39317
+Oct 16 17:04:26 tagus-web-01 sshd[3194]: Invalid user git from 203.0.113.235 port 33296
+Oct 16 18:39:49 tagus-web-01 sshd[3188]: Failed password for root from 203.0.113.47 port 58001 ssh2
+Oct 16 18:48:42 tagus-web-01 sshd[3171]: Invalid user user from 203.0.113.2 port 40309
+Oct 16 18:53:48 tagus-web-01 sshd[3186]: Invalid user user from 203.0.113.61 port 36422
+Oct 16 18:59:39 tagus-web-01 sshd[3176]: Invalid user git from 203.0.113.215 port 49812
+Oct 16 19:35:29 tagus-web-01 sshd[3180]: Invalid user git from 203.0.113.164 port 50610
+Oct 16 20:04:41 tagus-web-01 sshd[3189]: Failed password for root from 203.0.113.171 port 31152 ssh2
+Oct 16 20:28:46 tagus-web-01 sshd[3193]: Invalid user test from 203.0.113.45 port 36787
+Oct 16 20:31:27 tagus-web-01 sshd[3169]: Failed password for root from 203.0.113.124 port 58860 ssh2
+Oct 16 20:37:11 tagus-web-01 sshd[3184]: Invalid user test from 203.0.113.147 port 44187
+Oct 16 21:18:13 tagus-web-01 sshd[3191]: Invalid user admin from 203.0.113.50 port 38455
+Oct 16 21:30:57 tagus-web-01 sshd[3174]: Invalid user test from 203.0.113.184 port 47699
+Oct 16 21:31:04 tagus-web-01 sshd[3209]: Failed password for invalid user ci from 192.0.2.77 port 50000 ssh2
+Oct 16 21:31:11 tagus-web-01 sshd[3210]: Failed password for deploy from 192.0.2.77 port 50001 ssh2
+Oct 16 21:31:18 tagus-web-01 sshd[3211]: Failed password for deploy from 192.0.2.77 port 50002 ssh2
+Oct 16 21:31:25 tagus-web-01 sshd[3212]: Failed password for invalid user admin from 192.0.2.77 port 50003 ssh2
+Oct 16 21:31:32 tagus-web-01 sshd[3213]: Failed password for deploy from 192.0.2.77 port 50004 ssh2
+Oct 16 21:31:36 tagus-web-01 sshd[3214]: Failed password for deploy from 192.0.2.77 port 50005 ssh2
+Oct 16 21:31:42 tagus-web-01 sshd[3215]: Failed password for invalid user ci from 192.0.2.77 port 50006 ssh2
+Oct 16 21:31:47 tagus-web-01 sshd[3216]: Failed password for deploy from 192.0.2.77 port 50007 ssh2
+Oct 16 21:31:51 tagus-web-01 sshd[3217]: Failed password for deploy from 192.0.2.77 port 50008 ssh2
+Oct 16 21:31:55 tagus-web-01 sshd[3218]: Failed password for deploy from 192.0.2.77 port 50009 ssh2
+Oct 16 21:32:01 tagus-web-01 sshd[3219]: Failed password for deploy from 192.0.2.77 port 50010 ssh2
+Oct 16 21:32:07 tagus-web-01 sshd[3220]: Failed password for deploy from 192.0.2.77 port 50011 ssh2
+Oct 16 21:32:11 tagus-web-01 sshd[3221]: Failed password for invalid user jenkins from 192.0.2.77 port 50012 ssh2
+Oct 16 21:32:17 tagus-web-01 sshd[3222]: Failed password for deploy from 192.0.2.77 port 50013 ssh2
+Oct 16 21:32:21 tagus-web-01 sshd[3223]: Failed password for deploy from 192.0.2.77 port 50014 ssh2
+Oct 16 21:32:25 tagus-web-01 sshd[3224]: Failed password for invalid user jenkins from 192.0.2.77 port 50015 ssh2
+Oct 16 21:32:32 tagus-web-01 sshd[3225]: Failed password for deploy from 192.0.2.77 port 50016 ssh2
+Oct 16 21:32:36 tagus-web-01 sshd[3226]: Failed password for deploy from 192.0.2.77 port 50017 ssh2
+Oct 16 21:32:40 tagus-web-01 sshd[3227]: Failed password for invalid user jenkins from 192.0.2.77 port 50018 ssh2
+Oct 16 21:32:45 tagus-web-01 sshd[3228]: Failed password for deploy from 192.0.2.77 port 50019 ssh2
+Oct 16 21:32:49 tagus-web-01 sshd[3229]: Failed password for deploy from 192.0.2.77 port 50020 ssh2
+Oct 16 21:32:55 tagus-web-01 sshd[3230]: Failed password for invalid user admin from 192.0.2.77 port 50021 ssh2
+Oct 16 21:32:59 tagus-web-01 sshd[3231]: Failed password for deploy from 192.0.2.77 port 50022 ssh2
+Oct 16 21:33:04 tagus-web-01 sshd[3232]: Failed password for deploy from 192.0.2.77 port 50023 ssh2
+Oct 16 21:33:11 tagus-web-01 sshd[3233]: Failed password for invalid user jenkins from 192.0.2.77 port 50024 ssh2
+Oct 16 21:33:15 tagus-web-01 sshd[3234]: Failed password for deploy from 192.0.2.77 port 50025 ssh2
+Oct 16 21:33:22 tagus-web-01 sshd[3235]: Failed password for deploy from 192.0.2.77 port 50026 ssh2
+Oct 16 21:33:28 tagus-web-01 sshd[3236]: Failed password for invalid user admin from 192.0.2.77 port 50027 ssh2
+Oct 16 21:33:33 tagus-web-01 sshd[3237]: Failed password for deploy from 192.0.2.77 port 50028 ssh2
+Oct 16 21:33:38 tagus-web-01 sshd[3238]: Failed password for deploy from 192.0.2.77 port 50029 ssh2
+Oct 16 21:33:42 tagus-web-01 sshd[3239]: Failed password for deploy from 192.0.2.77 port 50030 ssh2
+Oct 16 21:33:49 tagus-web-01 sshd[3240]: Failed password for deploy from 192.0.2.77 port 50031 ssh2
+Oct 16 21:33:54 tagus-web-01 sshd[3241]: Failed password for deploy from 192.0.2.77 port 50032 ssh2
+Oct 16 21:34:01 tagus-web-01 sshd[3242]: Failed password for deploy from 192.0.2.77 port 50033 ssh2
+Oct 16 21:34:05 tagus-web-01 sshd[3243]: Failed password for deploy from 192.0.2.77 port 50034 ssh2
+Oct 16 21:34:09 tagus-web-01 sshd[3244]: Failed password for deploy from 192.0.2.77 port 50035 ssh2
+Oct 16 21:34:13 tagus-web-01 sshd[3245]: Failed password for invalid user jenkins from 192.0.2.77 port 50036 ssh2
+Oct 16 21:34:20 tagus-web-01 sshd[3246]: Failed password for deploy from 192.0.2.77 port 50037 ssh2
+Oct 16 21:34:26 tagus-web-01 sshd[3247]: Failed password for deploy from 192.0.2.77 port 50038 ssh2
+Oct 16 21:34:33 tagus-web-01 sshd[3248]: Failed password for invalid user ci from 192.0.2.77 port 50039 ssh2
+Oct 16 21:34:40 tagus-web-01 sshd[3249]: Failed password for deploy from 192.0.2.77 port 50040 ssh2
+Oct 16 21:34:47 tagus-web-01 sshd[3250]: Failed password for deploy from 192.0.2.77 port 50041 ssh2
+Oct 16 21:34:53 tagus-web-01 sshd[3251]: Failed password for invalid user admin from 192.0.2.77 port 50042 ssh2
+Oct 16 21:34:58 tagus-web-01 sshd[3252]: Failed password for deploy from 192.0.2.77 port 50043 ssh2
+Oct 16 21:35:03 tagus-web-01 sshd[3253]: Failed password for deploy from 192.0.2.77 port 50044 ssh2
+Oct 16 21:35:09 tagus-web-01 sshd[3254]: Failed password for invalid user ci from 192.0.2.77 port 50045 ssh2
+Oct 16 21:35:16 tagus-web-01 sshd[3255]: Failed password for deploy from 192.0.2.77 port 50046 ssh2
+Oct 16 21:35:21 tagus-web-01 sshd[3256]: Failed password for deploy from 192.0.2.77 port 50047 ssh2
+Oct 16 21:35:27 tagus-web-01 sshd[3257]: Failed password for invalid user admin from 192.0.2.77 port 50048 ssh2
+Oct 16 21:35:33 tagus-web-01 sshd[3258]: Failed password for deploy from 192.0.2.77 port 50049 ssh2
+Oct 16 21:35:40 tagus-web-01 sshd[3259]: Failed password for deploy from 192.0.2.77 port 50050 ssh2
+Oct 16 21:35:44 tagus-web-01 sshd[3260]: Failed password for deploy from 192.0.2.77 port 50051 ssh2
+Oct 16 21:35:51 tagus-web-01 sshd[3261]: Failed password for deploy from 192.0.2.77 port 50052 ssh2
+Oct 16 21:35:57 tagus-web-01 sshd[3262]: Failed password for deploy from 192.0.2.77 port 50053 ssh2
+Oct 16 21:36:03 tagus-web-01 sshd[3263]: Failed password for deploy from 192.0.2.77 port 50054 ssh2
+Oct 16 21:36:08 tagus-web-01 sshd[3264]: Failed password for deploy from 192.0.2.77 port 50055 ssh2
+Oct 16 21:36:14 tagus-web-01 sshd[3265]: Failed password for deploy from 192.0.2.77 port 50056 ssh2
+Oct 16 21:36:20 tagus-web-01 sshd[3266]: Failed password for invalid user ci from 192.0.2.77 port 50057 ssh2
+Oct 16 21:36:26 tagus-web-01 sshd[3267]: Failed password for deploy from 192.0.2.77 port 50058 ssh2
+Oct 16 21:36:32 tagus-web-01 sshd[3268]: Failed password for deploy from 192.0.2.77 port 50059 ssh2
+Oct 16 21:36:37 tagus-web-01 sshd[3269]: Failed password for invalid user ci from 192.0.2.77 port 50060 ssh2
+Oct 16 21:36:43 tagus-web-01 sshd[3270]: Failed password for deploy from 192.0.2.77 port 50061 ssh2
+Oct 16 21:36:47 tagus-web-01 sshd[3271]: Failed password for deploy from 192.0.2.77 port 50062 ssh2
+Oct 16 21:36:53 tagus-web-01 sshd[3272]: Failed password for invalid user admin from 192.0.2.77 port 50063 ssh2
+Oct 16 21:36:58 tagus-web-01 sshd[3273]: Failed password for deploy from 192.0.2.77 port 50064 ssh2
+Oct 16 21:37:05 tagus-web-01 sshd[3274]: Failed password for deploy from 192.0.2.77 port 50065 ssh2
+Oct 16 21:37:12 tagus-web-01 sshd[3275]: Failed password for invalid user admin from 192.0.2.77 port 50066 ssh2
+Oct 16 21:37:19 tagus-web-01 sshd[3276]: Failed password for deploy from 192.0.2.77 port 50067 ssh2
+Oct 16 21:37:25 tagus-web-01 sshd[3277]: Failed password for deploy from 192.0.2.77 port 50068 ssh2
+Oct 16 21:37:30 tagus-web-01 sshd[3278]: Failed password for invalid user ci from 192.0.2.77 port 50069 ssh2
+Oct 16 21:37:37 tagus-web-01 sshd[3279]: Failed password for deploy from 192.0.2.77 port 50070 ssh2
+Oct 16 21:37:44 tagus-web-01 sshd[3280]: Failed password for deploy from 192.0.2.77 port 50071 ssh2
+Oct 16 21:37:50 tagus-web-01 sshd[3281]: Failed password for invalid user ci from 192.0.2.77 port 50072 ssh2
+Oct 16 21:37:57 tagus-web-01 sshd[3282]: Failed password for deploy from 192.0.2.77 port 50073 ssh2
+Oct 16 21:38:01 tagus-web-01 sshd[3283]: Failed password for deploy from 192.0.2.77 port 50074 ssh2
+Oct 16 21:38:08 tagus-web-01 sshd[3284]: Failed password for invalid user ci from 192.0.2.77 port 50075 ssh2
+Oct 16 21:38:14 tagus-web-01 sshd[3285]: Failed password for deploy from 192.0.2.77 port 50076 ssh2
+Oct 16 21:38:20 tagus-web-01 sshd[3286]: Failed password for deploy from 192.0.2.77 port 50077 ssh2
+Oct 16 21:38:24 tagus-web-01 sshd[3287]: Failed password for invalid user ci from 192.0.2.77 port 50078 ssh2
+Oct 16 21:38:28 tagus-web-01 sshd[3288]: Failed password for deploy from 192.0.2.77 port 50079 ssh2
+Oct 16 21:38:34 tagus-web-01 sshd[3289]: Failed password for deploy from 192.0.2.77 port 50080 ssh2
+Oct 16 21:38:39 tagus-web-01 sshd[3290]: Failed password for invalid user jenkins from 192.0.2.77 port 50081 ssh2
+Oct 16 21:38:43 tagus-web-01 sshd[3291]: Failed password for deploy from 192.0.2.77 port 50082 ssh2
+Oct 16 21:38:47 tagus-web-01 sshd[3292]: Failed password for deploy from 192.0.2.77 port 50083 ssh2
+Oct 16 21:38:52 tagus-web-01 sshd[3293]: Failed password for deploy from 192.0.2.77 port 50084 ssh2
+Oct 16 21:38:57 tagus-web-01 sshd[3294]: Failed password for deploy from 192.0.2.77 port 50085 ssh2
+Oct 16 21:39:04 tagus-web-01 sshd[3295]: Failed password for deploy from 192.0.2.77 port 50086 ssh2
+Oct 16 21:39:08 tagus-web-01 sshd[3296]: Failed password for deploy from 192.0.2.77 port 50087 ssh2
+Oct 16 21:39:14 tagus-web-01 sshd[3297]: Failed password for deploy from 192.0.2.77 port 50088 ssh2
+Oct 16 21:39:18 tagus-web-01 sshd[3298]: Failed password for deploy from 192.0.2.77 port 50089 ssh2
+Oct 16 21:39:22 tagus-web-01 sshd[3299]: Failed password for deploy from 192.0.2.77 port 50090 ssh2
+Oct 16 21:39:28 tagus-web-01 sshd[3300]: Failed password for deploy from 192.0.2.77 port 50091 ssh2
+Oct 16 21:39:32 tagus-web-01 sshd[3301]: Failed password for deploy from 192.0.2.77 port 50092 ssh2
+Oct 16 21:39:37 tagus-web-01 sshd[3302]: Failed password for invalid user admin from 192.0.2.77 port 50093 ssh2
+Oct 16 21:39:44 tagus-web-01 sshd[3303]: Failed password for deploy from 192.0.2.77 port 50094 ssh2
+Oct 16 21:39:50 tagus-web-01 sshd[3304]: Failed password for deploy from 192.0.2.77 port 50095 ssh2
+Oct 16 21:39:54 tagus-web-01 sshd[3305]: Failed password for invalid user ci from 192.0.2.77 port 50096 ssh2
+Oct 16 21:39:59 tagus-web-01 sshd[3306]: Failed password for deploy from 192.0.2.77 port 50097 ssh2
+Oct 16 21:40:05 tagus-web-01 sshd[3307]: Failed password for deploy from 192.0.2.77 port 50098 ssh2
+Oct 16 21:40:09 tagus-web-01 sshd[3308]: Failed password for invalid user ci from 192.0.2.77 port 50099 ssh2
+Oct 16 21:40:16 tagus-web-01 sshd[3309]: Failed password for deploy from 192.0.2.77 port 50100 ssh2
+Oct 16 21:40:22 tagus-web-01 sshd[3310]: Failed password for deploy from 192.0.2.77 port 50101 ssh2
+Oct 16 21:40:26 tagus-web-01 sshd[3311]: Failed password for invalid user jenkins from 192.0.2.77 port 50102 ssh2
+Oct 16 21:40:33 tagus-web-01 sshd[3312]: Failed password for deploy from 192.0.2.77 port 50103 ssh2
+Oct 16 21:40:40 tagus-web-01 sshd[3313]: Failed password for deploy from 192.0.2.77 port 50104 ssh2
+Oct 16 21:40:46 tagus-web-01 sshd[3314]: Failed password for deploy from 192.0.2.77 port 50105 ssh2
+Oct 16 21:40:50 tagus-web-01 sshd[3315]: Failed password for deploy from 192.0.2.77 port 50106 ssh2
+Oct 16 21:40:55 tagus-web-01 sshd[3316]: Failed password for deploy from 192.0.2.77 port 50107 ssh2
+Oct 16 21:41:01 tagus-web-01 sshd[3317]: Failed password for invalid user admin from 192.0.2.77 port 50108 ssh2
+Oct 16 21:41:05 tagus-web-01 sshd[3318]: Failed password for deploy from 192.0.2.77 port 50109 ssh2
+Oct 16 21:41:09 tagus-web-01 sshd[3319]: Failed password for deploy from 192.0.2.77 port 50110 ssh2
+Oct 16 21:41:15 tagus-web-01 sshd[3320]: Failed password for invalid user jenkins from 192.0.2.77 port 50111 ssh2
+Oct 16 21:41:19 tagus-web-01 sshd[3321]: Failed password for deploy from 192.0.2.77 port 50112 ssh2
+Oct 16 21:41:26 tagus-web-01 sshd[3322]: Failed password for deploy from 192.0.2.77 port 50113 ssh2
+Oct 16 21:41:30 tagus-web-01 sshd[3323]: Failed password for invalid user jenkins from 192.0.2.77 port 50114 ssh2
+Oct 16 21:41:34 tagus-web-01 sshd[3324]: Failed password for deploy from 192.0.2.77 port 50115 ssh2
+Oct 16 21:41:39 tagus-web-01 sshd[3325]: Failed password for deploy from 192.0.2.77 port 50116 ssh2
+Oct 16 21:41:44 tagus-web-01 sshd[3326]: Failed password for deploy from 192.0.2.77 port 50117 ssh2
+Oct 16 21:41:51 tagus-web-01 sshd[3327]: Failed password for deploy from 192.0.2.77 port 50118 ssh2
+Oct 16 21:41:58 tagus-web-01 sshd[3328]: Failed password for deploy from 192.0.2.77 port 50119 ssh2
+Oct 16 21:42:04 tagus-web-01 sshd[3329]: Failed password for deploy from 192.0.2.77 port 50120 ssh2
+Oct 16 21:42:10 tagus-web-01 sshd[3330]: Failed password for deploy from 192.0.2.77 port 50121 ssh2
+Oct 16 21:42:17 tagus-web-01 sshd[3331]: Failed password for deploy from 192.0.2.77 port 50122 ssh2
+Oct 16 21:42:23 tagus-web-01 sshd[3332]: Failed password for invalid user jenkins from 192.0.2.77 port 50123 ssh2
+Oct 16 21:42:27 tagus-web-01 sshd[3333]: Failed password for deploy from 192.0.2.77 port 50124 ssh2
+Oct 16 21:42:32 tagus-web-01 sshd[3334]: Failed password for deploy from 192.0.2.77 port 50125 ssh2
+Oct 16 21:42:36 tagus-web-01 sshd[3335]: Failed password for invalid user ci from 192.0.2.77 port 50126 ssh2
+Oct 16 21:42:42 tagus-web-01 sshd[3336]: Failed password for deploy from 192.0.2.77 port 50127 ssh2
+Oct 16 21:42:49 tagus-web-01 sshd[3337]: Failed password for deploy from 192.0.2.77 port 50128 ssh2
+Oct 16 21:42:54 tagus-web-01 sshd[3338]: Failed password for deploy from 192.0.2.77 port 50129 ssh2
+Oct 16 21:43:00 tagus-web-01 sshd[3339]: Failed password for deploy from 192.0.2.77 port 50130 ssh2
+Oct 16 21:43:07 tagus-web-01 sshd[3340]: Failed password for deploy from 192.0.2.77 port 50131 ssh2
+Oct 16 21:43:13 tagus-web-01 sshd[3341]: Failed password for invalid user jenkins from 192.0.2.77 port 50132 ssh2
+Oct 16 21:43:20 tagus-web-01 sshd[3342]: Failed password for deploy from 192.0.2.77 port 50133 ssh2
+Oct 16 21:43:24 tagus-web-01 sshd[3343]: Failed password for deploy from 192.0.2.77 port 50134 ssh2
+Oct 16 21:43:29 tagus-web-01 sshd[3344]: Failed password for invalid user admin from 192.0.2.77 port 50135 ssh2
+Oct 16 21:43:36 tagus-web-01 sshd[3345]: Failed password for deploy from 192.0.2.77 port 50136 ssh2
+Oct 16 21:43:42 tagus-web-01 sshd[3346]: Failed password for deploy from 192.0.2.77 port 50137 ssh2
+Oct 16 21:43:46 tagus-web-01 sshd[3347]: Failed password for invalid user admin from 192.0.2.77 port 50138 ssh2
+Oct 16 21:43:53 tagus-web-01 sshd[3348]: Failed password for deploy from 192.0.2.77 port 50139 ssh2
+Oct 16 21:43:58 tagus-web-01 sshd[3349]: Failed password for deploy from 192.0.2.77 port 50140 ssh2
+Oct 16 21:44:03 tagus-web-01 sshd[3350]: Failed password for invalid user admin from 192.0.2.77 port 50141 ssh2
+Oct 16 21:44:10 tagus-web-01 sshd[3351]: Failed password for deploy from 192.0.2.77 port 50142 ssh2
+Oct 16 21:44:14 tagus-web-01 sshd[3352]: Failed password for deploy from 192.0.2.77 port 50143 ssh2
+Oct 16 21:44:20 tagus-web-01 sshd[3353]: Failed password for deploy from 192.0.2.77 port 50144 ssh2
+Oct 16 21:44:24 tagus-web-01 sshd[3354]: Failed password for deploy from 192.0.2.77 port 50145 ssh2
+Oct 16 21:44:31 tagus-web-01 sshd[3355]: Failed password for deploy from 192.0.2.77 port 50146 ssh2
+Oct 16 21:44:36 tagus-web-01 sshd[3356]: Failed password for invalid user ci from 192.0.2.77 port 50147 ssh2
+Oct 16 21:44:41 tagus-web-01 sshd[3357]: Failed password for deploy from 192.0.2.77 port 50148 ssh2
+Oct 16 21:44:47 tagus-web-01 sshd[3358]: Failed password for deploy from 192.0.2.77 port 50149 ssh2
+Oct 16 21:44:54 tagus-web-01 sshd[3359]: Failed password for invalid user admin from 192.0.2.77 port 50150 ssh2
+Oct 16 21:45:01 tagus-web-01 sshd[3360]: Failed password for deploy from 192.0.2.77 port 50151 ssh2
+Oct 16 21:45:08 tagus-web-01 sshd[3361]: Failed password for deploy from 192.0.2.77 port 50152 ssh2
+Oct 16 21:45:14 tagus-web-01 sshd[3362]: Failed password for invalid user admin from 192.0.2.77 port 50153 ssh2
+Oct 16 21:45:21 tagus-web-01 sshd[3363]: Failed password for deploy from 192.0.2.77 port 50154 ssh2
+Oct 16 21:45:27 tagus-web-01 sshd[3364]: Failed password for deploy from 192.0.2.77 port 50155 ssh2
+Oct 16 21:45:34 tagus-web-01 sshd[3365]: Failed password for invalid user ci from 192.0.2.77 port 50156 ssh2
+Oct 16 21:45:39 tagus-web-01 sshd[3366]: Failed password for deploy from 192.0.2.77 port 50157 ssh2
+Oct 16 21:45:44 tagus-web-01 sshd[3367]: Failed password for deploy from 192.0.2.77 port 50158 ssh2
+Oct 16 21:45:49 tagus-web-01 sshd[3368]: Failed password for invalid user admin from 192.0.2.77 port 50159 ssh2
+Oct 16 21:45:56 tagus-web-01 sshd[3369]: Failed password for deploy from 192.0.2.77 port 50160 ssh2
+Oct 16 21:46:02 tagus-web-01 sshd[3370]: Failed password for deploy from 192.0.2.77 port 50161 ssh2
+Oct 16 21:46:09 tagus-web-01 sshd[3371]: Failed password for deploy from 192.0.2.77 port 50162 ssh2
+Oct 16 21:46:14 tagus-web-01 sshd[3372]: Failed password for deploy from 192.0.2.77 port 50163 ssh2
+Oct 16 21:46:20 tagus-web-01 sshd[3373]: Failed password for deploy from 192.0.2.77 port 50164 ssh2
+Oct 16 21:46:27 tagus-web-01 sshd[3374]: Failed password for invalid user admin from 192.0.2.77 port 50165 ssh2
+Oct 16 21:46:31 tagus-web-01 sshd[3375]: Failed password for deploy from 192.0.2.77 port 50166 ssh2
+Oct 16 21:46:38 tagus-web-01 sshd[3376]: Failed password for deploy from 192.0.2.77 port 50167 ssh2
+Oct 16 21:46:42 tagus-web-01 sshd[3377]: Failed password for invalid user jenkins from 192.0.2.77 port 50168 ssh2
+Oct 16 21:46:48 tagus-web-01 sshd[3378]: Failed password for deploy from 192.0.2.77 port 50169 ssh2
+Oct 16 21:46:54 tagus-web-01 sshd[3379]: Failed password for deploy from 192.0.2.77 port 50170 ssh2
+Oct 16 21:47:01 tagus-web-01 sshd[3380]: Failed password for invalid user ci from 192.0.2.77 port 50171 ssh2
+Oct 16 21:47:05 tagus-web-01 sshd[3381]: Failed password for deploy from 192.0.2.77 port 50172 ssh2
+Oct 16 21:47:09 tagus-web-01 sshd[3382]: Failed password for deploy from 192.0.2.77 port 50173 ssh2
+Oct 16 21:47:16 tagus-web-01 sshd[3383]: Failed password for deploy from 192.0.2.77 port 50174 ssh2
+Oct 16 21:47:20 tagus-web-01 sshd[3384]: Failed password for deploy from 192.0.2.77 port 50175 ssh2
+Oct 16 21:47:26 tagus-web-01 sshd[3385]: Failed password for deploy from 192.0.2.77 port 50176 ssh2
+Oct 16 21:47:32 tagus-web-01 sshd[3386]: Failed password for invalid user jenkins from 192.0.2.77 port 50177 ssh2
+Oct 16 21:47:37 tagus-web-01 sshd[3387]: Failed password for deploy from 192.0.2.77 port 50178 ssh2
+Oct 16 21:47:44 tagus-web-01 sshd[3388]: Failed password for deploy from 192.0.2.77 port 50179 ssh2
+Oct 16 21:47:49 tagus-web-01 sshd[3389]: Failed password for invalid user admin from 192.0.2.77 port 50180 ssh2
+Oct 16 21:47:54 tagus-web-01 sshd[3390]: Failed password for deploy from 192.0.2.77 port 50181 ssh2
+Oct 16 21:47:58 tagus-web-01 sshd[3391]: Failed password for deploy from 192.0.2.77 port 50182 ssh2
+Oct 16 21:48:03 tagus-web-01 sshd[3392]: Failed password for deploy from 192.0.2.77 port 50183 ssh2
+Oct 16 21:48:07 tagus-web-01 sshd[3393]: Failed password for deploy from 192.0.2.77 port 50184 ssh2
+Oct 16 21:48:12 tagus-web-01 sshd[3394]: Failed password for deploy from 192.0.2.77 port 50185 ssh2
+Oct 16 21:48:17 tagus-web-01 sshd[3395]: Failed password for deploy from 192.0.2.77 port 50186 ssh2
+Oct 16 21:48:21 tagus-web-01 sshd[3396]: Failed password for deploy from 192.0.2.77 port 50187 ssh2
+Oct 16 21:48:27 tagus-web-01 sshd[3397]: Failed password for deploy from 192.0.2.77 port 50188 ssh2
+Oct 16 21:48:34 tagus-web-01 sshd[3398]: Failed password for invalid user jenkins from 192.0.2.77 port 50189 ssh2
+Oct 16 21:48:39 tagus-web-01 sshd[3399]: Failed password for deploy from 192.0.2.77 port 50190 ssh2
+Oct 16 21:48:43 tagus-web-01 sshd[3400]: Failed password for deploy from 192.0.2.77 port 50191 ssh2
+Oct 16 21:48:48 tagus-web-01 sshd[3401]: Failed password for invalid user admin from 192.0.2.77 port 50192 ssh2
+Oct 16 21:48:52 tagus-web-01 sshd[3402]: Failed password for deploy from 192.0.2.77 port 50193 ssh2
+Oct 16 21:48:58 tagus-web-01 sshd[3403]: Failed password for deploy from 192.0.2.77 port 50194 ssh2
+Oct 16 21:49:04 tagus-web-01 sshd[3404]: Failed password for invalid user admin from 192.0.2.77 port 50195 ssh2
+Oct 16 21:49:08 tagus-web-01 sshd[3405]: Failed password for deploy from 192.0.2.77 port 50196 ssh2
+Oct 16 21:49:13 tagus-web-01 sshd[3406]: Failed password for deploy from 192.0.2.77 port 50197 ssh2
+Oct 16 21:49:18 tagus-web-01 sshd[3407]: Failed password for deploy from 192.0.2.77 port 50198 ssh2
+Oct 16 21:49:24 tagus-web-01 sshd[3408]: Failed password for deploy from 192.0.2.77 port 50199 ssh2
+Oct 16 21:49:29 tagus-web-01 sshd[3409]: Failed password for deploy from 192.0.2.77 port 50200 ssh2
+Oct 16 21:49:35 tagus-web-01 sshd[3410]: Failed password for deploy from 192.0.2.77 port 50201 ssh2
+Oct 16 21:49:40 tagus-web-01 sshd[3411]: Failed password for deploy from 192.0.2.77 port 50202 ssh2
+Oct 16 21:49:46 tagus-web-01 sshd[3412]: Failed password for deploy from 192.0.2.77 port 50203 ssh2
+Oct 16 21:49:50 tagus-web-01 sshd[3413]: Failed password for invalid user admin from 192.0.2.77 port 50204 ssh2
+Oct 16 21:49:55 tagus-web-01 sshd[3414]: Failed password for deploy from 192.0.2.77 port 50205 ssh2
+Oct 16 21:50:01 tagus-web-01 sshd[3415]: Failed password for deploy from 192.0.2.77 port 50206 ssh2
+Oct 16 21:50:05 tagus-web-01 sshd[3416]: Failed password for invalid user admin from 192.0.2.77 port 50207 ssh2
+Oct 16 21:50:11 tagus-web-01 sshd[3417]: Failed password for deploy from 192.0.2.77 port 50208 ssh2
+Oct 16 21:50:18 tagus-web-01 sshd[3418]: Failed password for deploy from 192.0.2.77 port 50209 ssh2
+Oct 16 21:50:22 tagus-web-01 sshd[3419]: Failed password for invalid user jenkins from 192.0.2.77 port 50210 ssh2
+Oct 16 21:50:27 tagus-web-01 sshd[3420]: Failed password for deploy from 192.0.2.77 port 50211 ssh2
+Oct 16 21:52:30 tagus-web-01 sshd[4012]: Accepted password for deploy from 192.0.2.77 port 50122 ssh2
+Oct 16 21:52:30 tagus-web-01 sshd[4012]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Oct 16 21:52:31 tagus-web-01 systemd-logind[588]: New session 41 of user deploy.
+Oct 16 21:53:40 tagus-web-01 sudo:   deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=list
+Oct 16 21:58:12 tagus-web-01 sudo:   deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=www-data ; COMMAND=/usr/bin/bash
+Oct 16 21:58:12 tagus-web-01 sudo: pam_unix(sudo:session): session opened for user www-data(uid=33) by deploy(uid=1001)
+Oct 16 22:04:02 tagus-web-01 crontab[4133]: (www-data) REPLACE (www-data)
+Oct 16 22:05:10 tagus-web-01 sudo: pam_unix(sudo:session): session closed for user www-data
+Oct 16 22:05:12 tagus-web-01 sshd[4012]: pam_unix(sshd:session): session closed for user deploy
+Oct 16 22:05:12 tagus-web-01 systemd-logind[588]: Session 41 logged out. Waiting for processes to exit.
+Oct 16 22:35:59 tagus-web-01 sshd[3187]: Invalid user admin from 203.0.113.52 port 54677
+Oct 16 23:29:45 tagus-web-01 sshd[3168]: Invalid user test from 203.0.113.185 port 48104
+Oct 16 23:47:07 tagus-web-01 sshd[3170]: Invalid user ubuntu from 203.0.113.112 port 63141
+Oct 17 02:47:35 tagus-web-01 sshd[3203]: Invalid user user from 203.0.113.48 port 53097
+Oct 17 03:09:14 tagus-web-01 sshd[3208]: Invalid user admin from 203.0.113.101 port 48835
+Oct 17 05:09:54 tagus-web-01 sshd[3199]: Invalid user user from 203.0.113.171 port 54637
+Oct 17 05:22:38 tagus-web-01 sshd[3205]: Invalid user admin from 203.0.113.62 port 31844
+Oct 17 06:59:16 tagus-web-01 sshd[3201]: Failed password for root from 203.0.113.162 port 36462 ssh2
+Oct 17 07:35:46 tagus-web-01 sshd[3202]: Invalid user user from 203.0.113.60 port 34008
+Oct 17 07:36:16 tagus-web-01 sshd[3204]: Invalid user test from 203.0.113.36 port 55473
+Oct 17 08:00:30 tagus-web-01 sshd[3207]: Invalid user admin from 203.0.113.26 port 48743
+Oct 17 08:42:47 tagus-web-01 sshd[3200]: Invalid user ubuntu from 203.0.113.122 port 35067
+Oct 17 08:48:22 tagus-web-01 sshd[3206]: Invalid user user from 203.0.113.57 port 60850
+Oct 17 09:04:10 tagus-web-01 sshd[5288]: Accepted publickey for ops from 10.20.0.200 port 51544 ssh2: ED25519 SHA256:q1Yb0psKeyNotARealFingerprint0000000000000
+Oct 17 09:04:11 tagus-web-01 sshd[5288]: pam_unix(sshd:session): session opened for user ops(uid=1000) by (uid=0)
+Oct 17 09:05:02 tagus-web-01 sudo:      ops : TTY=pts/0 ; PWD=/home/ops ; USER=root ; COMMAND=/usr/bin/htop
+Oct 17 09:11:58 tagus-web-01 sudo:      ops : TTY=pts/0 ; PWD=/home/ops/blueteam-labs/session-07-forensic-acquisition ; USER=root ; COMMAND=./memory-capture.sh volatile /mnt/evidence/C-007
+Oct 17 09:14:31 tagus-web-01 sudo:      ops : TTY=pts/0 ; PWD=/home/ops ; USER=root ; COMMAND=/usr/bin/kill -STOP 4127
+Oct 17 09:20:44 tagus-web-01 sudo:      ops : TTY=pts/0 ; PWD=/mnt/evidence/C-007 ; USER=root ; COMMAND=/usr/bin/nano sessions-last.txt

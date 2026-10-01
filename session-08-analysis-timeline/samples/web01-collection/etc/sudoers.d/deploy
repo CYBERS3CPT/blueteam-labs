@@ -1,0 +1,2 @@
+# temporary, so the CI can fix permissions on /var/www. remove after go-live -- ops
+deploy ALL=(www-data) NOPASSWD: ALL
