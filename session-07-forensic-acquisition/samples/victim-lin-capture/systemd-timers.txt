@@ -1,0 +1,6 @@
+NEXT                        LEFT          LAST                        PASSED       UNIT                         ACTIVATES
+Fri 2025-10-17 09:39:00 UTC 26min left    Fri 2025-10-17 09:09:00 UTC 3min ago     phpsessionclean.timer        phpsessionclean.service
+Fri 2025-10-17 12:00:51 UTC 2h 48min left Thu 2025-10-16 12:00:51 UTC 21h ago      apt-daily.timer              apt-daily.service
+Sat 2025-10-18 00:00:00 UTC 14h left      Fri 2025-10-17 00:00:00 UTC 9h ago       logrotate.timer              logrotate.service
+
+3 timers listed.

@@ -1,0 +1,24 @@
+2025-10-17T09:12:01Z  START volatile collection on tagus-web-01
+2025-10-17T09:12:01Z  TOOLS Linux 6.1.0-26-amd64 x86_64 GNU/Linux
+2025-10-17T09:12:01Z  CLOCK system=2025-10-17T09:12:01Z (compare against a known reference and record the drift)
+2025-10-17T09:12:02Z  GRAB  network-connections.txt  sha256=f75606e92807c2651e7ba438dc79b12d79ce19df1c0a9cc5b581b0aa65937999  cmd=ss -tunapp
+2025-10-17T09:12:02Z  GRAB  network-arp.txt  sha256=0eb5550f16c2d8db7dcb49814f9f185029ff9450214ec714938c58c995070706  cmd=ip neigh
+2025-10-17T09:12:02Z  GRAB  processes-tree.txt  sha256=85dad5e99a9a903f9de2a5a52ae8dfe66ecd84cf9996915593a82d44036ef35a  cmd=ps auxfww
+2025-10-17T09:12:02Z  GRAB  processes-full.txt  sha256=1930a189aae02478b3eef9004c140b9f443374497764cb4ef1d214bed9b836f2  cmd=ps -eo pid,ppid,user,lstart,etime,stat,args
+2025-10-17T09:12:03Z  GRAB  open-files.txt  sha256=c54d2141b00d0058f3fd58dc40b749ac54fa6f1f5e6d72a989dd46271e1111c2  cmd=lsof -n -P
+2025-10-17T09:12:06Z  GRAB  loaded-modules.txt  sha256=00d2cbad3e7b5d6f4118ed049c8d3591f6edc8f6ad3a35d22cb6a4970d25097b  cmd=lsmod
+2025-10-17T09:12:06Z  GRAB  mounts.txt  sha256=fc9bbe250e9bbd72cfdb5e9ca1955631b9a46de88c25ae3042e831d1dcbc85a2  cmd=cat /proc/mounts
+2025-10-17T09:12:06Z  GRAB  sessions-who.txt  sha256=bde0c9496b9b8aef9364096d32f2b9d89cf29270e7a3250b8c62d3514ffae836  cmd=who -a
+2025-10-17T09:12:07Z  GRAB  sessions-last.txt  sha256=d58410183672ce4514141ffa4ee1afcb2fb0904534c59a5e8be1181b2e75bcbb  cmd=last -F -n 100
+2025-10-17T09:12:07Z  GRAB  cron-list.txt  sha256=1f15118a7e4f653e07f32644d6d6c8977b3e66961c5cee18ef432ee84369e5a2  cmd=bash -c for u in $(cut -d: -f1 /etc/passwd); do crontab -l -u "$u" 2>/dev/null | sed "s|^|$u: |"; done
+2025-10-17T09:12:07Z  GRAB  systemd-timers.txt  sha256=a47b36f4f2ea038303c52d48651559478f24dc99e509f4c7d1bf9834500bbaef  cmd=systemctl list-timers --all --no-pager
+2025-10-17T09:12:07Z  GRAB  uptime.txt  sha256=60a0d5ac9ef0a6989521c7c8a5ce78a07ec526468811f3bc9289c9c4ce34166d  cmd=uptime
+2025-10-17T09:12:09Z  FINDING processes with deleted executables present
+2025-10-17T09:12:09Z  END volatile collection
+
+--- added by ops, later ---
+reference clock (my phone) said 09:16 when the script started. so the server is ~4 min slow?
+before running the script I had a look around with htop for a few minutes, nothing obvious
+also ran 'kill -STOP 4127' at 09:14 so it stops talking to that IP. it worked
+cleaned up sessions-last.txt (removed a line that was just the deploy account, not relevant)
+memory: did not do it, the box only has 8 GB and the USB was nearly full. disk image tomorrow

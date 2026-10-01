@@ -1,0 +1,7 @@
+Module                  Size  Used by
+nf_conntrack          176128  1 xt_conntrack
+xt_conntrack           12288  1
+ext4                 1052672  2
+mbcache                16384  1 ext4
+jbd2                  192512  1 ext4
+virtio_net             69632  0

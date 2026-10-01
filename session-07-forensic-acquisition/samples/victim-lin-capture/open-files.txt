@@ -1,0 +1,11 @@
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
+sshd        905     root    3u  IPv4  21004      0t0     TCP *:22 (LISTEN)
+nginx      1179 www-data    7u  IPv4  22311      0t0     TCP *:443 (LISTEN)
+nginx      1179 www-data   12u  IPv4 310877      0t0     TCP 10.20.0.15:443->192.0.2.140:61022 (ESTABLISHED)
+php-fpm8. 3954 www-data   10u  IPv4 298114      0t0     TCP 127.0.0.1:41870->127.0.0.1:3306 (ESTABLISHED)
+kworker/u 4127 www-data  cwd    DIR   0,26       60       1 /dev/shm
+kworker/u 4127 www-data  txt    REG   0,26    18744      14 /dev/shm/.x (deleted)
+kworker/u 4127 www-data    0r   CHR    1,3      0t0       5 /dev/null
+kworker/u 4127 www-data    1w   CHR    1,3      0t0       5 /dev/null
+kworker/u 4127 www-data    2w   CHR    1,3      0t0       5 /dev/null
+kworker/u 4127 www-data    3u  IPv4 299502      0t0     TCP 10.20.0.15:48122->203.0.113.66:443 (ESTABLISHED)

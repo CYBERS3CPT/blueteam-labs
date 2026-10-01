@@ -1,0 +1,20 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    Oct06   0:00 [kthreadd]
+root         118  0.0  0.0      0     0 ?        I<   Oct06   0:00  \_ [kworker/u9:0-xprtiod]
+root         204  0.0  0.0      0     0 ?        I    Oct06   0:02  \_ [kworker/u8:3-events_unbound]
+root           1  0.0  0.2  22340 13110 ?        Ss   Oct06   0:09 /sbin/init
+systemd+     612  0.0  0.1  21700 12800 ?        Ss   Oct06   0:01 /lib/systemd/systemd-resolved
+root         905  0.0  0.1  15432  9120 ?        Ss   Oct06   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        5288  0.0  0.1  17160 10950 ?        Ss   09:04   0:00  \_ sshd: ops [priv]
+ops         5310  0.0  0.0  17420  6810 ?        S    09:04   0:00      \_ sshd: ops@pts/0
+ops         5311  0.0  0.0   8932  5520 pts/0    Ss   09:04   0:00          \_ -bash
+root        5402  0.6  0.0   9840  4400 pts/0    S+   09:05   0:02              \_ htop
+root        5530  0.0  0.0   7360  3600 pts/0    S+   09:11   0:00              \_ bash ./memory-capture.sh volatile /mnt/evidence/C-007
+mysql       1022  0.1  4.9 1460212 398220 ?      Ssl  Oct06  21:44 /usr/sbin/mariadbd
+root        1101  0.0  0.4 210300 35120 ?        Ss   Oct06   0:31 php-fpm: master process (/etc/php/8.2/fpm/php-fpm.conf)
+www-data    3954  0.0  0.3 211044 28800 ?        S    Oct16   0:04  \_ php-fpm: pool www
+root        1177  0.0  0.0  55220  1640 ?        Ss   Oct06   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+www-data    1178  0.0  0.0  55860  5600 ?        S    Oct06   0:12  \_ nginx: worker process
+www-data    1179  0.0  0.0  55860  5604 ?        S    Oct06   0:13  \_ nginx: worker process
+www-data    1180  0.0  0.0  55860  5588 ?        S    Oct06   0:11  \_ nginx: worker process
+www-data    4127  0.3  0.0   3120  1460 ?        S    Oct16   2:01 [kworker/u8:3]

@@ -1,0 +1,5 @@
+/dev/sda1 / ext4 rw,relatime,discard,errors=remount-ro 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,size=402232k,mode=755,inode64 0 0
+/dev/sda15 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077 0 0
+/dev/sdb1 /mnt/evidence ext4 rw,nosuid,nodev,relatime 0 0

@@ -6,6 +6,7 @@ evidence/
 *.pcap
 *.pcapng
 *.dd
+*.img
 *.E01
 *.raw
 *.lime

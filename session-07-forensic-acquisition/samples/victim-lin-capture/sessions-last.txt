@@ -1,0 +1,6 @@
+ops      pts/0        10.20.0.200      Fri Oct 17 09:04:11 2025   still logged in
+ops      pts/0        10.20.0.200      Wed Oct 15 14:20:03 2025 - Wed Oct 15 14:51:40 2025  (00:31)
+ops      pts/0        10.20.0.200      Mon Oct 13 10:02:55 2025 - Mon Oct 13 10:40:17 2025  (00:37)
+reboot   system boot  6.1.0-26-amd64   Mon Oct  6 07:58:09 2025   still running
+
+wtmp begins Mon Oct  6 07:58:09 2025

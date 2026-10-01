@@ -1,0 +1,33 @@
+C-007 / EX-01 - pen USB do Joao (finance)
+acquisition notes - Tiago
+(typed up from memory on friday, my notebook got coffee on it)
+
+thursday afternoon
+
+~14:20  got the pen from Joao's drawer, Ana from HR was there. put it in an
+        envelope. didn't have the seal stickers so I used tape, will seal properly later
+~14:30  left it on my desk, went to the finance meeting
+16:45   back. plugged pen into the forensics laptop. it showed up as /dev/sdb
+        (I think. could have been sdc, the laptop has a card reader)
+16:46   desktop popped up a "FERIAS" window, closed it straight away
+16:47   sudo blockdev --setro /dev/sdb  -> done, so it's read-only now
+16:48   dc3dd if=/dev/sdb of=/mnt/share/C-007/EX-01.img hash=sha256 log=EX-01.log
+        image 1 sha256 = 18d8d9c8fb5cc4efe9f6e96f894fe87ac4cc7d82321b3d33e9d6dbc1648d5817
+        dmesg had a few red lines about the usb, probably the hub, it's always like that
+17:02   ran it again with the pen in the other port, without the hub,
+        this time to the laptop disk: dc3dd if=/dev/sdb of=EX-01.img
+        image 2 sha256 = da195105fbe2ff30440965d5606873bca77a79ca07c1f2b3e7d4b9b5b22af439
+17:10   sha256sum /dev/sdb
+        = da195105fbe2ff30440965d5606873bca77a79ca07c1f2b3e7d4b9b5b22af439
+        MATCHES image 2 :)
+17:11   deleted image 1, no point keeping a bad copy  (*)
+17:15   pen back in the envelope, in the safe. Rui also has the code
+
+tool: dc3dd (whatever version Kali has)
+
+SUMMARY FOR THE REPORT:
+  Acquisition completed successfully. Source and image hashes matched.
+  No issues.
+
+(*) actually I couldn't delete it, it was on the share and I don't have
+    permissions there. it's in colleague/ if anyone needs it. which nobody will

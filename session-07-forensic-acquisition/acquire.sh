@@ -23,7 +23,9 @@ NOTES=""
 note() {  # every action, timestamped, as it happens
   local line="$(utc)  $*"
   printf '%s\n' "$line"
-  [[ -n "$NOTES" ]] && printf '%s\n' "$line" >> "$NOTES"
+  # An if, not `[[ ]] &&`: with errexit on, a false test as the last command
+  # makes note() return 1 and kills the script mid-blockcheck, without a word.
+  if [[ -n "$NOTES" ]]; then printf '%s\n' "$line" >> "$NOTES"; fi
 }
 
 usage() { sed -n '2,18p' "$0" | sed 's/^# \{0,1\}//'; exit "${1:-0}"; }
@@ -141,19 +143,34 @@ cmd_image() {
     dc3dd if="$dev" of="$image" hash=sha256 log="${base}-dc3dd.log" 2>&1 | tee -a "$NOTES"
   fi
 
-  # 3. hash the image
-  info "hashing image"
-  local img_hash; img_hash=$(sha256 "$image" 2>/dev/null | awk '{print $1}')
-  note "HASH-IMG $img_hash"
-
-  # 4. verify
+  # 3. hash the image. For raw, the file IS the data. For E01 it is not: the
+  #    .E01 is a compressed container with headers, so its file hash can never
+  #    equal the source hash, and comparing the two proves nothing. What has to
+  #    match the source is the hash of the data INSIDE it, which ewfverify
+  #    recomputes by decompressing every chunk.
+  local img_hash file_hash=""
   say ""
   rule
   if [[ "$image" == *.E01 ]]; then
-    info "ewfverify (verifies the embedded per-block digests)"
-    ewfverify "$image" 2>&1 | tail -8 | sed 's/^/     /' | tee -a "$NOTES"
-    note "COMPARE E01 stores its own source digest; compare it against HASH-SRC above"
-  elif [[ "$src_hash" == "$img_hash" ]]; then
+    info "ewfverify -d sha256 (decompresses and re-hashes the media data)"
+    local vout; vout=$(ewfverify -d sha256 "$image" 2>&1 || true)
+    printf '%s\n' "$vout" | tail -10 | sed 's/^/     /' | tee -a "$NOTES"
+    img_hash=$(printf '%s\n' "$vout" | awk -F: '/SHA256 hash calculated over data/{gsub(/[[:space:]]/,"",$2); print $2}')
+    if [[ -z "$img_hash" ]]; then
+      bad "ewfverify did not report a SHA-256 over the data"
+      img_hash="UNVERIFIED"
+    fi
+    file_hash=$(sha256 "$image" 2>/dev/null | awk '{print $1}')
+    note "HASH-IMG $img_hash  (SHA-256 of the media data inside the E01)"
+    note "HASH-E01 $file_hash  (SHA-256 of the .E01 file itself: for transfers, NOT for comparing with the source)"
+  else
+    info "hashing image"
+    img_hash=$(sha256 "$image" 2>/dev/null | awk '{print $1}')
+    note "HASH-IMG $img_hash"
+  fi
+
+  # 4. compare
+  if [[ "$src_hash" == "$img_hash" ]]; then
     ok "source and image hashes MATCH"
     note "COMPARE MATCH"
   else
@@ -188,7 +205,9 @@ cmd_verify() {
   banner "Verifying $(basename "$img")"
   if [[ "$img" == *.E01 ]]; then
     need ewfverify || exit 1
-    ewfverify "$img" | sed 's/^/  /'
+    ewfverify -d sha256 "$img" | sed 's/^/  /'
+    hint "the line that must match the source hash is \"SHA256 hash calculated over data\","
+    hint "not sha256sum of the .E01 file — that one hashes the container, compression and all"
     command -v ewfinfo >/dev/null && { say ""; info "embedded metadata"; ewfinfo "$img" | sed 's/^/  /' | head -25; }
   else
     info "sha256 (this reads the whole image; go and do something else)"

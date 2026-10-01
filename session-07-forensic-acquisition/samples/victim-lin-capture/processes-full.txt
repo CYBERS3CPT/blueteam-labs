@@ -1,0 +1,21 @@
+    PID    PPID USER     STARTED                      ELAPSED STAT COMMAND
+      1       0 root     Mon Oct  6 07:58:11 2025 11-01:13:52 Ss   /sbin/init
+      2       0 root     Mon Oct  6 07:58:11 2025 11-01:13:52 S    [kthreadd]
+    118       2 root     Mon Oct  6 07:58:12 2025 11-01:13:51 I<   [kworker/u9:0-xprtiod]
+    204       2 root     Mon Oct  6 07:58:12 2025 11-01:13:51 I    [kworker/u8:3-events_unbound]
+    612       1 systemd+ Mon Oct  6 07:58:14 2025 11-01:13:49 Ss   /lib/systemd/systemd-resolved
+    905       1 root     Mon Oct  6 07:58:15 2025 11-01:13:48 Ss   sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+   1022       1 mysql    Mon Oct  6 07:58:16 2025 11-01:13:47 Ssl  /usr/sbin/mariadbd
+   1101       1 root     Mon Oct  6 07:58:16 2025 11-01:13:47 Ss   php-fpm: master process (/etc/php/8.2/fpm/php-fpm.conf)
+   1177       1 root     Mon Oct  6 07:58:16 2025 11-01:13:47 Ss   nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+   1178    1177 www-data Mon Oct  6 07:58:16 2025 11-01:13:47 S    nginx: worker process
+   1179    1177 www-data Mon Oct  6 07:58:16 2025 11-01:13:47 S    nginx: worker process
+   1180    1177 www-data Mon Oct  6 07:58:16 2025 11-01:13:47 S    nginx: worker process
+   3954    1101 www-data Thu Oct 16 21:40:07 2025    11:31:56 S    php-fpm: pool www
+   4127       1 www-data Thu Oct 16 22:03:41 2025    11:08:22 S    [kworker/u8:3]
+   5288     905 root     Fri Oct 17 09:04:10 2025       07:53 Ss   sshd: ops [priv]
+   5310    5288 ops      Fri Oct 17 09:04:11 2025       07:52 S    sshd: ops@pts/0
+   5311    5310 ops      Fri Oct 17 09:04:11 2025       07:52 Ss   -bash
+   5402    5311 root     Fri Oct 17 09:05:02 2025       07:01 S+   htop
+   5530    5311 root     Fri Oct 17 09:11:58 2025       00:05 S+   bash ./memory-capture.sh volatile /mnt/evidence/C-007
+   5577    5530 root     Fri Oct 17 09:12:03 2025       00:00 R+   ps -eo pid,ppid,user,lstart,etime,stat,args
