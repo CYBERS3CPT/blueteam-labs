@@ -1,5 +1,16 @@
 # Session 7 — Forensic Principles and Evidence
 
+**Exercises:** [`EXERCISES.md`](EXERCISES.md) — twelve of them, built on the
+evidence in [`samples/`](samples/README.md): the USB pen you acquire tonight and
+analyse in Session 8, a colleague's failed first attempt at it, his notes and his
+chain of custody (both instructive, neither in a good way), and a volatile capture
+from a compromised server in which one file was "tidied" after it was hashed.
+
+```bash
+(cd samples && shasum -a 256 -c SHA256SUMS)    # hash on arrival
+mkdir -p out && gunzip -c samples/EX-01.img.gz > out/EX-01.img
+```
+
 ## `acquire.sh`
 
 ```bash
@@ -22,6 +33,16 @@ delivered early, and early is the only useful time for it.
 
 A hardware write blocker remains the defensible option. This is the software
 fallback, tested.
+
+### Which hash is the image hash
+
+For raw output the image file *is* the data, so its hash is the image hash. For
+E01 it is not: the `.E01` is a compressed container with headers and the case
+metadata inside, so its file hash can never equal the source hash — and two E01s
+of the same source, made a minute apart, will not even match each other. What has
+to match the source is the hash of the **data inside the container**, which
+`ewfverify -d sha256` recomputes by decompressing every chunk. The notes record
+both, labelled: `HASH-IMG` (compare this one) and `HASH-E01` (for transfers).
 
 ### Two hash passes, on purpose
 
