@@ -1,5 +1,16 @@
 # Session 9 — Mobile Device Forensics
 
+**Samples:** [`samples/`](samples/README.md) — two exhibits from one case, an
+Android logical collection and an iPhone backup, with the epoch each database
+keeps. Hash them on arrival and open them read-only.
+
+```bash
+(cd samples && shasum -a 256 -c SHA256SUMS)
+./epoch.py 1791356400000
+sqlite3 "file:samples/mmssms.db?immutable=1" \
+  "SELECT datetime(date/1000,'unixepoch'), address, body FROM sms ORDER BY date;"
+```
+
 ## `epoch.py`
 
 ```bash
