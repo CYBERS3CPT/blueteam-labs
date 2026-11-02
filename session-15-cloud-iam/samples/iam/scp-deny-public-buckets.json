@@ -1,0 +1,14 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "NoPublicBucketsEver",
+      "Effect": "Deny",
+      "Action": "s3:PutBucketPublicAccessBlock",
+      "Resource": "*",
+      "Condition": {
+        "Bool": { "s3:PublicAccessBlockConfiguration": "false" }
+      }
+    }
+  ]
+}

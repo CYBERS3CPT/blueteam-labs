@@ -1,0 +1,29 @@
+{
+  "_collected": "2025-11-27T10:14:40Z  aws s3api get-* --bucket tagus-ci-artifacts  (account 444455556666, by NuvemCerta for the handover)",
+  "Bucket": "tagus-ci-artifacts",
+  "Region": "us-east-1",
+  "GetPublicAccessBlock": {
+    "PublicAccessBlockConfiguration": {
+      "BlockPublicAcls": true,
+      "IgnorePublicAcls": true,
+      "BlockPublicPolicy": true,
+      "RestrictPublicBuckets": true
+    }
+  },
+  "GetBucketPolicyStatus": { "PolicyStatus": { "IsPublic": false } },
+  "GetBucketEncryption": {
+    "ServerSideEncryptionConfiguration": {
+      "Rules": [ { "ApplyServerSideEncryptionByDefault": { "SSEAlgorithm": "AES256" } } ]
+    }
+  },
+  "GetBucketVersioning": {},
+  "GetBucketLogging": {},
+  "ListObjectsV2_excerpt": [
+    { "Key": "builds/invoice-processor-1.4.2.zip", "Size": 2291034, "LastModified": "2025-11-24T15:03:11Z" },
+    { "Key": "builds/invoice-processor-1.4.3.zip", "Size": 2291551, "LastModified": "2025-11-25T11:47:02Z" },
+    { "Key": "fixtures/clientes-faturacao-2025-10.csv", "Size": 3311904, "LastModified": "2025-11-25T11:47:40Z" },
+    { "Key": "fixtures/README.txt", "Size": 233, "LastModified": "2025-11-25T11:47:41Z" }
+  ],
+  "fixtures/README.txt": "Test data for the OCR step. Exported from prod (tagus-invoices-prod/processed) so the tests are realistic. NIFs, names and IBANs as in production. -- rc",
+  "Tags": {}
+}

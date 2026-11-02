@@ -1,0 +1,42 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadInvoices",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::tagus-invoices-prod/*",
+      "Condition": { "Bool": { "aws:SecureTransport": "true" } }
+    },
+    {
+      "Sid": "ListInvoices",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::tagus-invoices-prod",
+      "Condition": { "Bool": { "aws:SecureTransport": "true" } }
+    },
+    {
+      "Sid": "WriteVault",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "s3:DeleteObjectVersion"
+      ],
+      "Resource": "arn:aws:s3:::tagus-backup-vault/*",
+      "Condition": { "Bool": { "aws:SecureTransport": "true" } }
+    },
+    {
+      "Sid": "ManageVault",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:ListBucketVersions",
+        "s3:PutBucketVersioning",
+        "s3:PutLifecycleConfiguration"
+      ],
+      "Resource": "arn:aws:s3:::tagus-backup-vault",
+      "Condition": { "Bool": { "aws:SecureTransport": "true" } }
+    }
+  ]
+}

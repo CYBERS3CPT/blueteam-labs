@@ -1,0 +1,46 @@
+{
+  "_collected": "2025-11-27T10:14:21Z  aws s3api get-* --bucket tagus-website-assets  (account 111122223333, by NuvemCerta for the handover)",
+  "Bucket": "tagus-website-assets",
+  "Region": "eu-west-1",
+  "GetPublicAccessBlock": {
+    "PublicAccessBlockConfiguration": {
+      "BlockPublicAcls": true,
+      "IgnorePublicAcls": true,
+      "BlockPublicPolicy": false,
+      "RestrictPublicBuckets": false
+    }
+  },
+  "GetBucketPolicy": {
+    "Policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "PublicWebsite",
+          "Effect": "Allow",
+          "Principal": "*",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::tagus-website-assets/*"
+        }
+      ]
+    }
+  },
+  "GetBucketPolicyStatus": { "PolicyStatus": { "IsPublic": true } },
+  "GetBucketEncryption": {
+    "ServerSideEncryptionConfiguration": {
+      "Rules": [ { "ApplyServerSideEncryptionByDefault": { "SSEAlgorithm": "AES256" } } ]
+    }
+  },
+  "GetBucketVersioning": { "Status": "Enabled" },
+  "GetBucketLogging": {},
+  "ListObjectsV2_excerpt": [
+    { "Key": "index.html", "Size": 18211, "LastModified": "2025-11-20T16:02:11Z" },
+    { "Key": "css/site.css", "Size": 40122, "LastModified": "2025-11-20T16:02:11Z" },
+    { "Key": "img/frota-camioes.jpg", "Size": 912334, "LastModified": "2025-11-20T16:02:12Z" },
+    { "Key": "img/logo-tagus.svg", "Size": 6120, "LastModified": "2025-11-20T16:02:12Z" },
+    { "Key": "contactos.html", "Size": 9042, "LastModified": "2025-11-20T16:02:12Z" },
+    { "Key": "migration/web01-www.tar.gz", "Size": 48211903, "LastModified": "2025-11-18T21:40:57Z" },
+    { "Key": "migration/web01-etc.tar.gz", "Size": 1203311, "LastModified": "2025-11-18T21:41:03Z" },
+    { "Key": "migration/README-nuvemcerta.txt", "Size": 412, "LastModified": "2025-11-18T21:41:04Z" }
+  ],
+  "Tags": { "owner": "marketing", "environment": "prod" }
+}

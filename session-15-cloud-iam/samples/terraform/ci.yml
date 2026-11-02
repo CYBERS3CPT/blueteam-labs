@@ -1,0 +1,33 @@
+# .github/workflows/deploy.yml  (copied from the contractor's repository)
+name: deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  scan-and-apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: IaC scan
+        uses: bridgecrewio/checkov-action@v12
+        with:
+          directory: infra/
+          soft_fail: true
+          skip_check: CKV_AWS_18,CKV_AWS_21,CKV2_AWS_6,CKV_AWS_16,CKV_AWS_17,CKV_AWS_129,CKV_AWS_157,CKV_AWS_161,CKV_AWS_293,CKV2_AWS_61,CKV2_AWS_62
+
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: arn:aws:iam::111122223333:role/ci-deploy
+          aws-region: us-east-1
+
+      - uses: hashicorp/setup-terraform@v3
+
+      - run: terraform -chdir=terraform init
+      - run: terraform -chdir=terraform apply -auto-approve

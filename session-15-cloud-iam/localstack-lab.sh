@@ -19,29 +19,49 @@
 
 ENDPOINT="${AWS_ENDPOINT_URL:-http://localhost:4566}"
 NAME="${LS_NAME:-blueteam-localstack}"
-awsl() { aws --endpoint-url="$ENDPOINT" "$@"; }
+PROFILE="${LS_PROFILE:-blueteam-lab}"
+# Pinned. From 2026.03 the localstack/localstack image refuses to start without
+# an account token (exit code 55), and "latest" moved under everybody's feet.
+# 4.14.0 is the last release that starts without one. It is frozen, which for
+# S3 and IAM basics is fine. Have a token (the free Hobby plan is for
+# non-commercial use)? LS_IMAGE=localstack/localstack:<version> and
+# LOCALSTACK_AUTH_TOKEN=... and it is passed through.
+IMAGE="${LS_IMAGE:-localstack/localstack:4.14.0}"
+awsl() { aws --profile "$PROFILE" --endpoint-url="$ENDPOINT" "$@"; }
 
 usage() { sed -n '2,19p' "$0" | sed 's/^# \{0,1\}//'; exit "${1:-0}"; }
 
 cmd_up() {
   need docker || exit 1
-  need aws "pip install awscli" || exit 1
+  need aws "sudo apt install awscli   (or: pipx install awscli)" || exit 1
   banner "LocalStack" "no account, no credit card, no bill at the end of the month"
   docker rm -f "$NAME" >/dev/null 2>&1 || true
-  docker run -d --name "$NAME" -p 4566:4566 localstack/localstack >/dev/null || die "docker run failed"
-  # Fake credentials, because LocalStack does not check them. Setting them stops
-  # the CLI from silently falling back to your REAL profile, which is the failure
-  # mode that turns a lab exercise into a live API call.
-  aws configure set aws_access_key_id test
-  aws configure set aws_secret_access_key test
-  aws configure set region eu-west-1
+  local token=()
+  [[ -n "${LOCALSTACK_AUTH_TOKEN:-}" ]] && token=(-e LOCALSTACK_AUTH_TOKEN)
+  # Loopback only: an unauthenticated AWS lookalike is not something to offer
+  # to the rest of the network.
+  docker run -d --name "$NAME" -p "127.0.0.1:4566:4566" "${token[@]}" "$IMAGE" >/dev/null \
+    || die "docker run failed"
+  # Fake credentials, in a profile of their own. Two failure modes, both real:
+  # without credentials the CLI falls back to your REAL ones when the endpoint
+  # override is missed, and a lab exercise becomes a live API call; and
+  # 'aws configure set' with no --profile writes into [default], silently
+  # replacing whatever was there — possibly your employer's keys.
+  aws configure set aws_access_key_id test --profile "$PROFILE"
+  aws configure set aws_secret_access_key test --profile "$PROFILE"
+  aws configure set region eu-west-1 --profile "$PROFILE"
   info "waiting"
   for i in $(seq 1 30); do
     awsl s3 ls >/dev/null 2>&1 && { say ""; ok "ready at $ENDPOINT"; break; }
     printf '.'; sleep 2
-    [[ $i -eq 30 ]] && { say ""; die "LocalStack did not come up — docker logs $NAME"; }
+    if [[ $i -eq 30 ]] || ! docker ps -q --filter "name=^${NAME}$" | grep -q .; then
+      say ""
+      docker logs "$NAME" 2>&1 | grep -qi 'license\|auth token' \
+        && die "this image wants an auth token — see IMAGE at the top of $0"
+      die "LocalStack did not come up — docker logs $NAME"
+    fi
   done
-  hint "alias awsl='aws --endpoint-url=$ENDPOINT'   — you will type it forty times"
+  hint "alias awsl='aws --profile $PROFILE --endpoint-url=$ENDPOINT'   — you will type it forty times"
 }
 
 cmd_bucket() {
@@ -91,12 +111,16 @@ cmd_posture() {
 
   info "4. is access logged?"
   local log; log=$(awsl s3api get-bucket-logging --bucket "$b" 2>/dev/null | grep -o 'TargetBucket' || true)
-  if [[ -n "$log" ]]; then ok "server access logging configured"
+  if [[ -n "$log" ]]; then
+    ok "server access logging configured"
+    hint "now check WHERE it goes: logging a bucket into itself mixes evidence with"
+    hint "the data it describes, and whoever can delete one can delete the other."
   else
     bad "no access logging"; n=$((n+1))
-    hint "and note: this is the management plane. DATA-plane events — who READ"
-    hint "which object — are a separate setting, usually off, and separately billed."
-    hint "an attacker who reads ten thousand objects generates one event, or none."
+    hint "server access logs do record reads, but best-effort, hours late, and with"
+    hint "no integrity check. The audit-grade record of who READ which object is"
+    hint "CloudTrail DATA events: a separate setting, off by default, billed per event."
+    hint "with neither, an attacker who reads ten thousand objects leaves no trace."
   fi
 
   say ""

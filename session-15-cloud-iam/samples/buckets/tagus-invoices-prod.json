@@ -1,0 +1,39 @@
+{
+  "_collected": "2025-11-27T10:14:03Z  aws s3api get-* --bucket tagus-invoices-prod  (account 111122223333, by NuvemCerta for the handover)",
+  "Bucket": "tagus-invoices-prod",
+  "Region": "eu-west-1",
+  "GetPublicAccessBlock": {
+    "Error": "An error occurred (NoSuchPublicAccessBlockConfiguration) when calling the GetPublicAccessBlock operation: The public access block configuration was not found"
+  },
+  "GetAccountPublicAccessBlock": {
+    "Error": "An error occurred (NoSuchPublicAccessBlockConfiguration) when calling the GetPublicAccessBlock operation: The public access block configuration was not found"
+  },
+  "GetBucketPolicyStatus": { "PolicyStatus": { "IsPublic": false } },
+  "GetBucketAcl": {
+    "Owner": { "ID": "a3f1c0de5e1f0e1d9c8b7a6f5e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d" },
+    "Grants": [
+      { "Grantee": { "Type": "CanonicalUser", "ID": "a3f1c0de5e1f0e1d9c8b7a6f5e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d" }, "Permission": "FULL_CONTROL" }
+    ]
+  },
+  "GetBucketEncryption": {
+    "ServerSideEncryptionConfiguration": {
+      "Rules": [ { "ApplyServerSideEncryptionByDefault": { "SSEAlgorithm": "AES256" }, "BucketKeyEnabled": false } ]
+    }
+  },
+  "GetBucketVersioning": { "Status": "Suspended" },
+  "GetBucketLogging": {
+    "LoggingEnabled": { "TargetBucket": "tagus-invoices-prod", "TargetPrefix": "logs/" }
+  },
+  "GetBucketLifecycleConfiguration": {
+    "Rules": [
+      { "ID": "tidy-logs", "Status": "Enabled", "Filter": { "Prefix": "logs/" }, "Expiration": { "Days": 7 } }
+    ]
+  },
+  "CloudTrailDataEvents": "none configured for this bucket (management events only)",
+  "ListObjectVersions_summary": {
+    "incoming/": { "objects": 3, "noncurrent_versions": 0 },
+    "processed/": { "objects": 1184, "noncurrent_versions": 212 },
+    "logs/": { "objects": 9311, "noncurrent_versions": 0 }
+  },
+  "Tags": { "owner": "nuvemcerta", "environment": "prod" }
+}

@@ -1,0 +1,105 @@
+{
+  "version": 4,
+  "terraform_version": "1.13.4",
+  "serial": 31,
+  "lineage": "6b1f2e0c-4d7a-4c55-9b8e-2a6c1d3e9f10",
+  "outputs": {
+    "db_endpoint": {
+      "value": "tagus-invoices-prod.c3x9q2k7v1ab.us-east-1.rds.amazonaws.com:5432",
+      "type": "string"
+    },
+    "db_password": {
+      "value": "Xq7!mR2#vT9@kL4$pW8z",
+      "type": "string"
+    },
+    "invoices_bucket": {
+      "value": "tagus-invoices-prod",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "random_password",
+      "name": "db",
+      "provider": "provider[\"registry.terraform.io/hashicorp/random\"]",
+      "instances": [
+        {
+          "schema_version": 3,
+          "attributes": {
+            "bcrypt_hash": "$2a$10$Qy0bZ8m1kz2V9yH3p6Xr0O8d6lJ0Q2bE1x1Yk3c5Vf7Ng9Hh1Jj2K",
+            "id": "none",
+            "length": 20,
+            "result": "Xq7!mR2#vT9@kL4$pW8z",
+            "special": true
+          },
+          "sensitive_attributes": [[{ "type": "get_attr", "value": "result" }], [{ "type": "get_attr", "value": "bcrypt_hash" }]]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_db_instance",
+      "name": "invoices",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "address": "tagus-invoices-prod.c3x9q2k7v1ab.us-east-1.rds.amazonaws.com",
+            "arn": "arn:aws:rds:us-east-1:111122223333:db:tagus-invoices-prod",
+            "availability_zone": "us-east-1c",
+            "backup_retention_period": 0,
+            "deletion_protection": false,
+            "endpoint": "tagus-invoices-prod.c3x9q2k7v1ab.us-east-1.rds.amazonaws.com:5432",
+            "engine": "postgres",
+            "engine_version": "17.6",
+            "identifier": "tagus-invoices-prod",
+            "instance_class": "db.t4g.micro",
+            "password": "Xq7!mR2#vT9@kL4$pW8z",
+            "port": 5432,
+            "publicly_accessible": true,
+            "storage_encrypted": false,
+            "username": "tagus_app"
+          },
+          "sensitive_attributes": [[{ "type": "get_attr", "value": "password" }]]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "invoices",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:s3:::tagus-invoices-prod",
+            "bucket": "tagus-invoices-prod",
+            "bucket_regional_domain_name": "tagus-invoices-prod.s3.eu-west-1.amazonaws.com",
+            "id": "tagus-invoices-prod",
+            "region": "eu-west-1"
+          }
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "nuvemcerta_support",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::111122223333:role/NuvemCerta-Admin",
+            "create_date": "2025-11-14T17:22:09Z",
+            "name": "NuvemCerta-Admin",
+            "max_session_duration": 43200
+          }
+        }
+      ]
+    }
+  ]
+}
