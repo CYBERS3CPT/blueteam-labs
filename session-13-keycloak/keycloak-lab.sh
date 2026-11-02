@@ -28,8 +28,10 @@ cmd_up() {
   need docker || exit 1
   banner "Keycloak" "dev mode — no TLS, no persistence, no illusions"
   docker rm -f "$NAME" >/dev/null 2>&1 || true
-  docker run -d --name "$NAME" -p "${PORT}:8080" \
-    -e KEYCLOAK_ADMIN="$ADMIN" -e KEYCLOAK_ADMIN_PASSWORD="$ADMIN_PW" \
+  # Loopback only: a lab Keycloak with admin/admin should not be on the café Wi-Fi.
+  # KC_BOOTSTRAP_ADMIN_* replaced KEYCLOAK_ADMIN* in Keycloak 26 (see INSTALL.md).
+  docker run -d --name "$NAME" -p "127.0.0.1:${PORT}:8080" \
+    -e KC_BOOTSTRAP_ADMIN_USERNAME="$ADMIN" -e KC_BOOTSTRAP_ADMIN_PASSWORD="$ADMIN_PW" \
     quay.io/keycloak/keycloak:latest start-dev >/dev/null || die "docker run failed"
   info "waiting for it to answer"
   for i in $(seq 1 40); do

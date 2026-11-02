@@ -55,6 +55,7 @@ session-12-access-audit/           access-audit.sh      who can actually log in
 session-13-keycloak/               keycloak-lab.sh      a realm you can break safely
                                    jwt-decode.py        decoding is not verifying
                                    oidc-flow.py         the whole flow, narrated
+                                   INSTALL.md           the install the lab skips
 session-14-access-lifecycle/       access-review.py     no approve-by-default
                                    deprovision-check.sh the thirteen things people miss
 session-15-cloud-iam/              localstack-lab.sh    cloud practice without a bill

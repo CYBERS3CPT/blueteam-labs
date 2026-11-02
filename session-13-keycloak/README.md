@@ -1,5 +1,11 @@
 # Session 13 — Identity and Authentication Management
 
+> **Installing Keycloak for real?** `keycloak-lab.sh` is dev mode on purpose.
+> [`INSTALL.md`](INSTALL.md) is the step-by-step manual for everything it skips:
+> OpenJDK, PostgreSQL, a verified download, systemd, nginx with Let's Encrypt,
+> which paths to expose (and which never to), the temporary admin and how to get
+> rid of it, backups, upgrades, and a Compose variant.
+
 ## `keycloak-lab.sh`
 
 ```bash
