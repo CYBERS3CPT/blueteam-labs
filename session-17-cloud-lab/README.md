@@ -1,5 +1,10 @@
 # Session 17 — Cloud Assessment Laboratory
 
+> **Exercises:** [`EXERCISES.md`](EXERCISES.md), thirteen of them. Half run on
+> your own LocalStack lab; the other half on the fixtures in
+> [`samples/`](samples/): the scope Tagus signed for an outside assessment, the
+> sweep that came back "clean", and what Tiago found the Monday after.
+
 > Everything here runs against **an environment you own, that you created for
 > this purpose, and that you will destroy before you leave**. Every major cloud
 > provider publishes a policy on customer security testing. Read yours before you

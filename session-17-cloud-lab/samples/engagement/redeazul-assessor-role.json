@@ -1,0 +1,52 @@
+{
+  "Role": {
+    "RoleName": "RedeAzul-Assessor",
+    "Arn": "arn:aws:iam::444455556666:role/RedeAzul-Assessor",
+    "CreateDate": "2025-12-12T17:05:41Z",
+    "MaxSessionDuration": 43200,
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": { "AWS": "arn:aws:iam::210987654321:root" },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Tags": [
+      { "Key": "engagement", "Value": "redeazul-2025-12" },
+      { "Key": "created-by", "Value": "tiago.fonseca" }
+    ],
+    "RoleLastUsed": {
+      "LastUsedDate": "2025-12-21T09:14:07Z",
+      "Region": "eu-west-1"
+    }
+  },
+  "InlinePolicy": {
+    "PolicyName": "assessor-read",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "ReadWhatWeAssess",
+          "Effect": "Allow",
+          "Action": [
+            "sts:GetCallerIdentity",
+            "lambda:GetFunction",
+            "lambda:GetPolicy",
+            "lambda:ListFunctions",
+            "secretsmanager:ListSecrets",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetResourcePolicy",
+            "logs:DescribeLogGroups",
+            "logs:FilterLogEvents",
+            "cloudtrail:LookupEvents"
+          ],
+          "Resource": "*"
+        }
+      ]
+    }
+  },
+  "_note": "Exported by Tiago on 2025-12-22 with: aws iam get-role --role-name RedeAzul-Assessor; aws iam get-role-policy --role-name RedeAzul-Assessor --policy-name assessor-read"
+}

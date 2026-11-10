@@ -1,0 +1,18 @@
+[
+  {
+    "RoleName": "RedeAzul-Assessor",
+    "CreateDate": "2025-12-12T17:05:41Z",
+    "Principal": { "AWS": "arn:aws:iam::210987654321:root" },
+    "Tags": { "engagement": "redeazul-2025-12", "created-by": "tiago.fonseca" },
+    "RoleLastUsed": { "LastUsedDate": "2025-12-21T09:14:07Z", "Region": "eu-west-1" }
+  },
+  {
+    "RoleName": "ra-lab-exec",
+    "CreateDate": "2025-12-16T10:39:55Z",
+    "Principal": { "Service": "lambda.amazonaws.com" },
+    "AttachedPolicies": ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"],
+    "InlinePolicies": ["probe-read"],
+    "Tags": {},
+    "RoleLastUsed": { "LastUsedDate": "2025-12-19T16:02:44Z", "Region": "eu-west-1" }
+  }
+]

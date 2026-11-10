@@ -1,0 +1,42 @@
+From:    Marta Lopes <marta.lopes@redeazul.example>
+To:      Tiago Fonseca <tiago.fonseca@tagus.example>
+Date:    Fri, 19 Dec 2025 18:47:12 +0000
+Subject: Tagus non-prod assessment: testing complete, teardown done
+
+Hi Tiago,
+
+Testing finished at 17:58, inside the window. Summary of where we are:
+
+1. Teardown. As agreed, you removed RedeAzul-Builder at 17:30, so nothing
+   more can be created from our side. All resources tagged
+   engagement=redeazul-2025-12 have been deleted. I then ran our standard
+   sweep with the assessor role:
+
+     AWS_PROFILE=tagus-assessor ./teardown-check.sh sweep | tee teardown-sweep-2025-12-19.txt
+
+   Output attached: no compute survivors in any region, no buckets, no
+   access keys. Clean.
+
+2. Evidence. The 50-record sample (section 4 of the scope) is in our
+   evidence store and will be deleted when the report is accepted.
+
+3. Access. We would prefer to keep RedeAzul-Assessor until the report is
+   accepted, in case we need to re-verify a finding. It is read-only. Remove
+   it whenever you are comfortable.
+
+4. Report. Draft by 9 January. Headline: the OIDC trust and the invoice
+   role are still the problem, and you already knew that.
+
+One thing I would rather say now than in the report: on Tuesday we saw
+activity in non-prod from a GitHub repository that was not ours and not
+yours. We noted it and carried on, since it was outside what we had been
+asked to look at. Rui is aware.
+
+Have a good Christmas.
+
+Marta
+
+--
+Marta Lopes · Rede Azul Segurança · redeazul.example
+
+Attachment: teardown-sweep-2025-12-19.txt

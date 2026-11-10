@@ -1,0 +1,15 @@
+────────────────────────────────────────────────────────────────────────
+Sweep
+the things that survive a destroy, in every region
+────────────────────────────────────────────────────────────────────────
+==> checking 5 region(s)
+       every region. The forgotten instance is never in the one you deployed to.
+  ok  no compute survivors in any region
+
+==> S3 (global)
+  ok  no buckets
+
+==> IAM — access keys and roles created during the exercise
+
+==> anything shared with an external account
+       this is the one that is not a cost problem — it is a data problem

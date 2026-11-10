@@ -1,0 +1,32 @@
+{
+  "Functions": [
+    {
+      "FunctionName": "invoice-processor",
+      "FunctionArn": "arn:aws:lambda:eu-west-1:444455556666:function:invoice-processor",
+      "Runtime": "python3.12",
+      "Role": "arn:aws:iam::444455556666:role/invoice-app-nonprod",
+      "Handler": "app.handler",
+      "CodeSize": 48213,
+      "Timeout": 60,
+      "MemorySize": 512,
+      "LastModified": "2025-12-16T10:52:03.000+0000",
+      "Version": "$LATEST",
+      "PackageType": "Zip",
+      "Architectures": ["arm64"]
+    },
+    {
+      "FunctionName": "ra-oidc-probe",
+      "FunctionArn": "arn:aws:lambda:eu-west-1:444455556666:function:ra-oidc-probe",
+      "Runtime": "python3.12",
+      "Role": "arn:aws:iam::444455556666:role/ra-lab-exec",
+      "Handler": "probe.handler",
+      "CodeSize": 2311,
+      "Timeout": 30,
+      "MemorySize": 128,
+      "LastModified": "2025-12-16T10:41:12.000+0000",
+      "Version": "$LATEST",
+      "PackageType": "Zip",
+      "Architectures": ["x86_64"]
+    }
+  ]
+}

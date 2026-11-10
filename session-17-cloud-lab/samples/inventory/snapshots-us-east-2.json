@@ -1,0 +1,19 @@
+{
+  "Snapshots": [
+    {
+      "Description": "ra: copy of vol-0c4e2a19b7d3f5a60 (sftp-nonprod data) for offline review",
+      "Encrypted": false,
+      "OwnerId": "444455556666",
+      "Progress": "100%",
+      "SnapshotId": "snap-0e7a1c2b3d4f50617",
+      "StartTime": "2025-12-17T14:22:09.000Z",
+      "State": "completed",
+      "VolumeId": "vol-ffffffff",
+      "VolumeSize": 20,
+      "StorageTier": "standard",
+      "Tags": [
+        { "Key": "engagement", "Value": "redeazul-2025-12" }
+      ]
+    }
+  ]
+}

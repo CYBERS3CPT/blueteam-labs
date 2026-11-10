@@ -1,0 +1,56 @@
+date,service,usage_type,unblended_cost_usd
+2025-12-12,AWS Lambda,EUW1-Lambda-GB-Second,0.2361
+2025-12-12,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-12,Amazon S3,EUW1-TimedStorage-ByteHrs,0.404
+2025-12-12,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-13,AWS Lambda,EUW1-Lambda-GB-Second,0.2503
+2025-12-13,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-13,Amazon S3,EUW1-TimedStorage-ByteHrs,0.406
+2025-12-13,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-14,AWS Lambda,EUW1-Lambda-GB-Second,0.258
+2025-12-14,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-14,Amazon S3,EUW1-TimedStorage-ByteHrs,0.408
+2025-12-14,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-15,AWS Lambda,EUW1-Lambda-GB-Second,0.2245
+2025-12-15,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-15,Amazon S3,EUW1-TimedStorage-ByteHrs,0.41
+2025-12-15,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-15,AWS Key Management Service,EUW1-KMS-Requests,0.0043
+2025-12-16,AWS Lambda,EUW1-Lambda-GB-Second,0.3352
+2025-12-16,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-16,Amazon S3,EUW1-TimedStorage-ByteHrs,0.412
+2025-12-16,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-16,AWS Key Management Service,EUW1-KMS-Requests,0.004
+2025-12-17,AWS Lambda,EUW1-Lambda-GB-Second,0.3055
+2025-12-17,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-17,Amazon S3,EUW1-TimedStorage-ByteHrs,0.414
+2025-12-17,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-17,EC2 - Other,USE2-EBS:SnapshotUsage,0.0141
+2025-12-17,AWS Key Management Service,EUW1-KMS-Requests,0.0021
+2025-12-18,AWS Lambda,EUW1-Lambda-GB-Second,0.3192
+2025-12-18,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-18,Amazon S3,EUW1-TimedStorage-ByteHrs,0.416
+2025-12-18,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-18,EC2 - Other,USE2-EBS:SnapshotUsage,0.0327
+2025-12-18,AWS Key Management Service,EUW1-KMS-Requests,0.0042
+2025-12-19,AWS Lambda,EUW1-Lambda-GB-Second,0.3126
+2025-12-19,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-19,Amazon S3,EUW1-TimedStorage-ByteHrs,0.418
+2025-12-19,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-19,EC2 - Other,USE2-EBS:SnapshotUsage,0.0327
+2025-12-19,AWS Key Management Service,EUW1-KMS-Requests,0.0035
+2025-12-20,AWS Lambda,EUW1-Lambda-GB-Second,0.2259
+2025-12-20,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-20,Amazon S3,EUW1-TimedStorage-ByteHrs,0.42
+2025-12-20,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-20,EC2 - Other,USE2-EBS:SnapshotUsage,0.0327
+2025-12-21,AWS Lambda,EUW1-Lambda-GB-Second,0.2523
+2025-12-21,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-21,Amazon S3,EUW1-TimedStorage-ByteHrs,0.422
+2025-12-21,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-21,EC2 - Other,USE2-EBS:SnapshotUsage,0.0327
+2025-12-22,AWS Lambda,EUW1-Lambda-GB-Second,0.2573
+2025-12-22,AWS Secrets Manager,EUW1-AWSSecretsManager-Secrets,0.0533
+2025-12-22,Amazon S3,EUW1-TimedStorage-ByteHrs,0.424
+2025-12-22,AWS CloudTrail,EUW1-PaidEventsRecorded,0.0
+2025-12-22,EC2 - Other,USE2-EBS:SnapshotUsage,0.0327

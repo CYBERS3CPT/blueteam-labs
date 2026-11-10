@@ -19,6 +19,9 @@ seen.json
 harden-state/
 scope-*.md
 register.csv
+attack-log.csv
+attack-log.meta
+detection-gaps-*.csv
 
 # Credentials. Obviously. But people do commit these, hence the reminder.
 .env
