@@ -1,0 +1,183 @@
+{
+  "_collected": "2025-12-08T09:12:44Z  aws guardduty get-detector + list-findings + get-findings --region eu-west-1  (account 111122223333, by Tiago)",
+  "GetDetector": {
+    "CreatedAt": "2025-12-04T10:05:33.412Z",
+    "FindingPublishingFrequency": "SIX_HOURS",
+    "ServiceRole": "arn:aws:iam::111122223333:role/aws-service-role/guardduty.amazonaws.com/AWSServiceRoleForAmazonGuardDuty",
+    "Status": "ENABLED",
+    "UpdatedAt": "2025-12-04T10:05:33.412Z",
+    "Features": [
+      {
+        "Name": "CLOUD_TRAIL",
+        "Status": "ENABLED"
+      },
+      {
+        "Name": "DNS_LOGS",
+        "Status": "ENABLED"
+      },
+      {
+        "Name": "FLOW_LOGS",
+        "Status": "ENABLED"
+      },
+      {
+        "Name": "S3_DATA_EVENTS",
+        "Status": "ENABLED"
+      },
+      {
+        "Name": "EBS_MALWARE_PROTECTION",
+        "Status": "DISABLED"
+      },
+      {
+        "Name": "RDS_LOGIN_EVENTS",
+        "Status": "DISABLED"
+      },
+      {
+        "Name": "LAMBDA_NETWORK_LOGS",
+        "Status": "DISABLED"
+      },
+      {
+        "Name": "RUNTIME_MONITORING",
+        "Status": "DISABLED"
+      }
+    ],
+    "Tags": {}
+  },
+  "EventBridgeRulesForGuardDuty": [],
+  "Findings": [
+    {
+      "AccountId": "111122223333",
+      "Arn": "arn:aws:guardduty:eu-west-1:111122223333:detector/c2cbd6a8e1f04b7d9a3e5f6071829304/finding/8ec9d0e1f2a3b4c5d6e7f8091a2b3c4d",
+      "CreatedAt": "2025-12-05T14:26:37.881Z",
+      "Description": "Credentials for the EC2 instance role web02-portal were used from a remote AWS account or IP address 198.51.100.77.",
+      "Id": "8ec9d0e1f2a3b4c5d6e7f8091a2b3c4d",
+      "Partition": "aws",
+      "Region": "eu-west-1",
+      "Resource": {
+        "AccessKeyDetails": {
+          "AccessKeyId": "ASIAQXZ7EXAMPLE4WEB",
+          "PrincipalId": "AROAQXZ7EXAMPLEWEB02:i-0a1b2c3d4e5f60718",
+          "UserName": "web02-portal",
+          "UserType": "AssumedRole"
+        },
+        "InstanceDetails": {
+          "InstanceId": "i-0a1b2c3d4e5f60718",
+          "InstanceType": "t3.small",
+          "IamInstanceProfile": {
+            "Arn": "arn:aws:iam::111122223333:instance-profile/web02-portal",
+            "Id": "AIPAQXZ7EXAMPLEPROF1"
+          },
+          "ImageId": "ami-0b1c2d3e4f5a6b7c8",
+          "LaunchTime": "2025-11-18T16:21:04.000Z",
+          "Tags": [
+            {
+              "Key": "Name",
+              "Value": "WEB-02"
+            }
+          ]
+        },
+        "ResourceType": "AccessKey"
+      },
+      "SchemaVersion": "2.0",
+      "Service": {
+        "Action": {
+          "ActionType": "AWS_API_CALL",
+          "AwsApiCallAction": {
+            "Api": "GetBucketPolicy",
+            "CallerType": "Remote IP",
+            "ErrorCode": "AccessDenied",
+            "RemoteIpDetails": {
+              "City": {
+                "CityName": "Amsterdam"
+              },
+              "Country": {
+                "CountryName": "Netherlands"
+              },
+              "IpAddressV4": "198.51.100.77",
+              "Organization": {
+                "Asn": "64496",
+                "AsnOrg": "EXAMPLE-HOSTING-AS",
+                "Isp": "Example Hosting B.V.",
+                "Org": "Example Hosting B.V."
+              }
+            },
+            "ServiceName": "s3.amazonaws.com",
+            "UserAgent": {
+              "FullUserAgent": "Boto3/1.35.71 md/Botocore#1.35.71 ua/2.0 os/linux#6.8.0-49-generic md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.71",
+              "UserAgentCategory": "Python SDK"
+            }
+          }
+        },
+        "Archived": false,
+        "Count": 7,
+        "DetectorId": "c2cbd6a8e1f04b7d9a3e5f6071829304",
+        "EventFirstSeen": "2025-12-05T14:11:41.000Z",
+        "EventLastSeen": "2025-12-05T18:19:40.000Z",
+        "ResourceRole": "TARGET",
+        "ServiceName": "guardduty"
+      },
+      "Severity": 8,
+      "Title": "Credentials for the EC2 instance role web02-portal were used from a remote AWS account or IP address.",
+      "Type": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS",
+      "UpdatedAt": "2025-12-05T18:34:12.006Z"
+    },
+    {
+      "AccountId": "111122223333",
+      "Arn": "arn:aws:guardduty:eu-west-1:111122223333:detector/c2cbd6a8e1f04b7d9a3e5f6071829304/finding/2a3b4c5d6e7f8091a2b3c4d5e6f70819",
+      "CreatedAt": "2025-12-05T17:48:51.230Z",
+      "Description": "APIs commonly used to discover, modify, and/or create resources were invoked using root credentials from IP address 192.0.2.25.",
+      "Id": "2a3b4c5d6e7f8091a2b3c4d5e6f70819",
+      "Partition": "aws",
+      "Region": "eu-west-1",
+      "Resource": {
+        "AccessKeyDetails": {
+          "AccessKeyId": "ASIAQXZ7EXAMPLEROOT1",
+          "PrincipalId": "111122223333",
+          "UserName": "Root",
+          "UserType": "Root"
+        },
+        "ResourceType": "AccessKey"
+      },
+      "SchemaVersion": "2.0",
+      "Service": {
+        "Action": {
+          "ActionType": "AWS_API_CALL",
+          "AwsApiCallAction": {
+            "Api": "RunInstances",
+            "CallerType": "Remote IP",
+            "RemoteIpDetails": {
+              "City": {
+                "CityName": "Lisbon"
+              },
+              "Country": {
+                "CountryName": "Portugal"
+              },
+              "IpAddressV4": "192.0.2.25",
+              "Organization": {
+                "Asn": "64511",
+                "AsnOrg": "EXAMPLE-TELECOM-PT",
+                "Isp": "Example Telecom",
+                "Org": "Tagus Logistica"
+              }
+            },
+            "ServiceName": "ec2.amazonaws.com",
+            "UserAgent": {
+              "FullUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+              "UserAgentCategory": "Browser"
+            }
+          }
+        },
+        "Archived": false,
+        "Count": 6,
+        "DetectorId": "c2cbd6a8e1f04b7d9a3e5f6071829304",
+        "EventFirstSeen": "2025-12-05T17:33:02.000Z",
+        "EventLastSeen": "2025-12-05T17:53:41.000Z",
+        "ResourceRole": "TARGET",
+        "ServiceName": "guardduty"
+      },
+      "Severity": 2,
+      "Title": "API RunInstances was invoked using root credentials.",
+      "Type": "Policy:IAMUser/RootCredentialUsage",
+      "UpdatedAt": "2025-12-05T17:58:03.774Z"
+    }
+  ]
+}

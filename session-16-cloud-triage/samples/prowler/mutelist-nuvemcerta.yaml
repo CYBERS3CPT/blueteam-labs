@@ -1,0 +1,42 @@
+# Prowler mutelist — Tagus Logística
+# Maintained by NuvemCerta, Lda. Passed to every scan with:
+#     prowler aws --mutelist-file mutelist-nuvemcerta.yaml ...
+#
+# Muted findings are known and accepted. They do not need to appear in the
+# report the Board sees.  -- rc, 2025-11-27
+
+Mutelist:
+  Accounts:
+    "111122223333":
+      Checks:
+        # support role for incidents, temporary (see handover)
+        "iam_role_administratoraccess_policy":
+          Regions:
+            - "*"
+          Resources:
+            - "NuvemCerta-Admin"
+        "iam_aws_attached_policy_no_administrative_privileges":
+          Regions:
+            - "*"
+          Resources:
+            - "AdministratorAccess"
+        # office connects with DBeaver
+        "rds_instance_no_public_access":
+          Regions:
+            - "*"
+          Resources:
+            - "*"
+        # legacy PHP on WEB-02 breaks with IMDSv2, fixed in phase 2
+        "ec2_instance_imdsv2_enabled":
+          Regions:
+            - "*"
+          Resources:
+            - "*"
+    "*":
+      Checks:
+        # data events are expensive
+        "cloudtrail_s3_dataevents_.*":
+          Regions:
+            - "*"
+          Resources:
+            - "*"

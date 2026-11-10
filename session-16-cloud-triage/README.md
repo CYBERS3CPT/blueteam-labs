@@ -1,5 +1,10 @@
 # Session 16 — Cloud Threats, Tooling and Risk
 
+> **Exercises:** [`EXERCISES.md`](EXERCISES.md), fifteen of them, on the fixtures in
+> [`samples/`](samples/): Tagus Logística's first Prowler scan (312 findings, eight
+> of them muted by the contractor), the suppressions and risk register that came
+> after it, and the Friday afternoon when one of the muted findings was used.
+
 ## `triage-findings.py`
 
 ```bash

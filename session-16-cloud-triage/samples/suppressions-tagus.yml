@@ -1,0 +1,38 @@
+# Suppressions for triage-findings.py — Tagus Logística
+# Started by Tiago (IT) on 2025-12-04, after the first scan, from the example
+# file. Two entries were sent over by NuvemCerta the same afternoon.
+#
+#   check     substring of the check ID or title
+#   resource  optional — omit to suppress the check everywhere
+#   reason    why this is acceptable HERE
+#   who       a person
+#   until     YYYY-MM-DD
+
+- check: s3_bucket_public_access
+  resource: tagus-website-assets
+  reason: deliberate static site; no customer data; content reviewed by marketing
+  who: Tiago
+  until: 2099-12-31
+
+- check: cloudtrail
+  reason: false positive
+  who: IT
+  until: 2099-12-31
+
+# from NuvemCerta (Rui Costa), 2025-12-04 15:12
+- check: public
+  resource: tagus
+  reason: Tagus resources reviewed by NuvemCerta at handover; see the handover note, section Security
+  who: Rui Costa
+  until: 2030-06-30
+
+# from NuvemCerta (Rui Costa), 2025-12-04 15:12
+- check: ec2_instance_imdsv2_enabled
+  resource: WEB-02
+  reason: legacy PHP portal requires IMDSv1 until phase 2 (containers)
+  who: Rui Costa
+
+- check: ec2_securitygroup_default_restrict_traffic
+  reason: default security groups are not used by any instance; to be removed in the network clean-up
+  who: Tiago
+  until: 2025-12-31
